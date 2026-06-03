@@ -1,19 +1,5 @@
 # Chapter 1 — The Fluency Trap
-
-<!-- voice-anchored: root style/VOICE.md (Attenborough × Feynman / "fry").
-     Per-book style/ empty — root baseline used. Draft. Never published. -->
-
-**Title options**
-
-1. The Fluency Trap
-2. The First Sign of Trouble Is Fluency
-3. The Rung That Got Removed
-
----
-
-**TL;DR.** The danger of working with AI is not that it fails in front of you — it's that it succeeds, fluently, on a screen, while the judgment you would have built by doing the work yourself quietly fails to form. This chapter shows the mechanism by which fluency erodes judgment, why that erosion is most dangerous for the person on a ninety-day visa clock, and what the boundary between execution and judgment actually is.
-
----
+*What the screen never asks you — and why fluency and correctness stopped being the same thing.*
 
 It is a Tuesday in March, and you are twelve minutes into a take-home assignment for a job you need more than the people interviewing you will ever know. The prompt asks you to clean a dataset and justify your choices. You paste it into the model. Three seconds pass. The answer arrives — complete, formatted, confident. There is a function. There are comments. There is even a short paragraph explaining the reasoning, written in the calm cadence of someone who has done this a hundred times.
 
@@ -27,7 +13,7 @@ This is the trap. Not failure. Fluency. The first sign of trouble is almost neve
 
 I want to take that apart, because almost everything that matters about working in the AI era — and almost everything that matters for you specifically, if you are an international student with a visa clock running — lives inside it.
 
-## Two words doing different jobs
+## Two Words Doing Different Jobs
 
 We need to separate two things that the word "work" has been quietly gluing together.
 
@@ -43,7 +29,9 @@ Watch how this shows up in how work is actually graded. In courses that permit A
 
 So the question "can you do the work?" has split into two questions that now have wildly different answers. Can you produce the artifact? Yes — so can everyone, instantly. Can you tell whether the artifact is any good? That is the only question left with a scarce answer. And it is the one the screen never asks you.
 
-## Why the doing was the training
+<!-- → [CHART: two-bar column chart showing the value split — "Procedural competence" (~75-80%) vs "Judgment" (~20-25%) as share of grade/market value; a second panel shows the same split for "Who can supply it" — AI can supply the first bar almost entirely, humans exclusively supply the second; caption should read: "The question 'can you do the work?' has split. One half is now free. The other has not moved."] -->
+
+## Why the Doing Was the Training
 
 Now the mechanism — the part I had to think through several times before it sat still.
 
@@ -59,13 +47,15 @@ The hand-coding group averaged 67 percent. The AI-assisted group averaged 50 per
 
 And here is the detail that turns a finding into a warning. Inside the AI group, behavior split the outcome cleanly. The engineers who used the model to *interrogate* — asking it conceptual questions, challenging its answers, forcing themselves to understand what it produced — scored 65 percent or higher. The engineers who used it to *delegate* — describe the problem, accept the output, move on — scored below 40.[^anthropic] Same tool. Same task. Opposite result. The variable was not the AI. It was whether the human kept doing the judgment work while the machine did the typing.
 
+<!-- → [INFOGRAPHIC: three-column comparison — "Hand-coding" (67% comprehension quiz average), "AI + interrogation" (≥65%), "AI + delegation" (<40%); visual treatment should emphasize that the middle and left columns converge while the right column falls off sharply; caption: "The tool is identical in the middle and right columns. The variable is what the human does while it runs."] -->
+
 That is the mechanism, and it has a name worth carrying: **comprehension debt**. When you let the machine execute and you skip the understanding, you do not avoid the cost of learning. You defer it. You take out a loan against a moment in the future when the system breaks in a way that requires you to understand it — and comprehension debt, like every debt, comes due at the worst possible time, with interest.
 
 The senior engineer and the junior engineer can run the exact same prompt and get opposite trajectories from it. Give a model to someone who already has judgment, and it multiplies them — they read the output, hear the wrong note before the tests catch it, steer and correct. Researchers call that the **AI boost**. Give the same model to someone who has not yet built that judgment, and it produces plausible output they cannot evaluate, the work gets done, and the learning does not happen. That is **AI drag**.[^drag] The tool is identical. The difference is entirely in what the human brings to it — and what they keep doing while it runs.
 
 Sit with the cruelty of that for a second, because it is the center of this book. The boost goes to people who already have judgment. The drag falls on the people still trying to build it. AI does not lift everyone equally. It widens the gap between those who can already tell good from plausible and those who cannot yet — and it does so precisely at the rung where that telling was supposed to be learned.
 
-## The rung that got removed
+## The Rung That Got Removed
 
 Step back from the one student at the desk and look at the whole structure.
 
@@ -81,7 +71,9 @@ This is the inversion that has happened to skilled work across the board. A soft
 
 And the market is pricing it exactly that way. As of 2025, AI had moved from a curiosity to a board-level liability: the share of S&P 500 companies naming AI as a *material risk* in their annual filings jumped from 12 percent in 2023 to 72 percent in 2025.[^spx] A material risk is not hype — it is a legal disclosure that this could hurt the company badly enough that shareholders must be warned. Seven hundred of America's largest firms, in the dry language of securities law, are telling their investors that getting the judgment wrong about these fluent machines is a danger to the enterprise. The thing they are afraid of is not that the AI cannot execute. It is that someone will trust a fluent output that was wrong.
 
-## Why this lands hardest on you
+<!-- → [CHART: line chart, 2023–2025, showing share of S&P 500 companies disclosing AI as material risk in 10-K filings — from 12% to 72% to 83% (Conference Board Dec 2025 update); annotate the 2023→2025 jump with a label reading "hype becomes liability"; caption: "Seven hundred of America's largest companies are telling investors in legal language: trusting the wrong fluent output is an enterprise risk."] -->
+
+## Why This Lands Hardest on You
 
 Now bring the two pictures together — the student at the desk and the structure around them — because at their intersection sits a specific person this book is written for.
 
@@ -89,13 +81,15 @@ If you are an international student in the United States on F-1 status, working 
 
 Here is the clock. On post-completion OPT, you may accrue no more than ninety cumulative days of unemployment across your entire authorization period. Not business days — calendar days. Weekends count. Holidays count. The counter starts the day your work authorization begins and does not stop. Exceed it, and the Department of Homeland Security terminates your immigration record. There is no grace period. You must leave the country.[^opt] This is why the system at the heart of this book budgets to *eighty* days, not ninety — you want a margin between you and a cliff that does not forgive.
 
+<!-- → [INFOGRAPHIC: timeline diagram showing the 90-day unemployment clock — a horizontal bar representing the OPT authorization period, with a red segment marking cumulative unemployment days, a dashed line at 80 days labeled "this book's working limit," and a hard stop at 90 labeled "DHS terminates record / no grace period"; annotate that weekends and holidays count; caption: "The clock does not distinguish between a Tuesday and a Sunday. It runs."] -->
+
 Now lay the structure on top of that clock. The entry-level rung — the one that used to absorb new graduates and teach them judgment over a patient couple of years — is the rung being automated and, in most companies that are not IBM, quietly removed. The market is paying for judgment you have not yet been given the chance to build. And the most natural response to a ninety-day clock and a wall of rejections is to apply faster — to let the machine generate the cover letters, autofill the applications, produce the take-home in three fluent seconds and submit it. To delegate. To run up comprehension debt at the precise moment you can least afford to have it come due in an interview.
 
 The fluency trap, for you, is not abstract. It is the difference between using these tools as a boost — interrogating, checking, building the judgment that makes you the rare candidate who can tell good from plausible — and using them as a drag, producing fluent applications that look like everyone else's fluent applications, learning nothing, and watching the days tick down.
 
 This is the trade-off named plainly. AI optimizes for the fluent, the common, the likely. That is what it is *for*, and it is genuinely miraculous at it. What it cannot do is supply the salient, the situated, the correct-in-this-particular-case — the judgment about whether the likely answer is the right answer here, for this dataset, this employer, this person whose visa depends on it. Lean on the fluency and skip the judgment, and the tool works beautifully right up until the moment it matters, which is the one moment it cannot help you.
 
-## What the screen never asks
+## What the Screen Never Asks
 
 Return to the Tuesday afternoon, the take-home, the answer that arrived in three clean seconds.
 
@@ -109,9 +103,39 @@ The machine will do the typing. The judgment is yours, and it always was. The re
 
 ---
 
-**What would change my mind.** If a replication of the Anthropic trial — or several — found that AI-assisted learners caught up to or surpassed hand-coders on delayed comprehension once they had used the tools for longer, the "comprehension debt" mechanism would need serious revision: it would mean the debt is repaid by familiarity rather than compounding. The current evidence is one well-designed but small (n = 52) study; one study is a finding, not a law.
+**What Would Change My Mind.** If a replication of the Anthropic trial — or several — found that AI-assisted learners caught up to or surpassed hand-coders on delayed comprehension once they had used the tools for longer, the "comprehension debt" mechanism would need serious revision: it would mean the debt is repaid by familiarity rather than compounding. The current evidence is one well-designed but small (n = 52) study; one study is a finding, not a law.
 
-**Still puzzling.** I do not fully understand where the line sits between *interrogating* a model and *delegating* to it in real practice. The trial shows the two produce opposite outcomes, but a working analyst does both within the same hour, often within the same prompt. I do not yet know how to teach someone to feel which mode they are in while they are in it — and that, not the statistics, may be the hardest thing this book has to do.
+**Still Puzzling.** I do not fully understand where the line sits between *interrogating* a model and *delegating* to it in real practice. The trial shows the two produce opposite outcomes, but a working analyst does both within the same hour, often within the same prompt. I do not yet know how to teach someone to feel which mode they are in while they are in it — and that, not the statistics, may be the hardest thing this book has to do.
+
+---
+
+## Exercises
+
+**Warm-up**
+
+1. *Tests the execution/judgment distinction.* A classmate says, "I used AI to clean the data and it worked fine — the model ran without errors." What question should you ask before accepting that verdict? Identify the specific gap between "no errors" and "correct." *(Difficulty: Low)*
+
+2. *Tests comprehension debt as a concept.* In your own words, explain why letting a model execute a task you don't yet understand increases your risk over time rather than reducing it. Use the debt metaphor: what is being borrowed, and when does it come due? *(Difficulty: Low)*
+
+3. *Tests the AI boost/drag distinction.* Two new analysts join the same team on the same day with the same tools. Six months later, one has developed strong judgment and one has not. What behavioral difference during their first month most likely explains the gap? *(Difficulty: Low)*
+
+**Application**
+
+4. *Tests interrogation vs. delegation in practice.* You ask a model to write a SQL query that returns the top ten customers by revenue last quarter. It returns a clean, well-formatted query in under three seconds. Write a list of five specific questions you should ask — either of the model or of yourself — before trusting that output in a stakeholder report. *(Difficulty: Medium)*
+
+5. *Tests the value split between execution and judgment.* A job posting says: "We use AI tools extensively; comfort with AI-assisted coding is required." A classmate reads this as evidence that judgment skills matter less now that the tools do the coding. Construct the counter-argument, using the IBM example and the grading-split framing from this chapter. *(Difficulty: Medium)*
+
+6. *Tests the OPT clock stakes.* You have been on post-completion OPT for four months. You have used thirty days of your unemployment allowance. You receive a take-home assignment and have the option to submit the AI-generated version quickly or spend two additional days working through it yourself. What factors — specific to your immigration status and to the comprehension-debt argument — should shape that decision? *(Difficulty: Medium)*
+
+**Synthesis**
+
+7. *Tests the rung-removal and judgment-pipeline arguments together.* IBM's decision to triple entry-level hiring in 2026 and redefine those roles around "systems judgment" appears to contradict the widespread claim that AI is eliminating entry-level jobs. Explain the logic that makes both statements simultaneously true, and identify what kind of company would make the error IBM is trying to avoid. *(Difficulty: High)*
+
+8. *Tests fluency vs. correctness as a systemic risk.* The chapter cites S&P 500 companies disclosing AI as a material risk in their 10-K filings. Why would a fluent-but-wrong output be categorized as an enterprise-level financial risk rather than just a quality-control problem? What does "material risk" mean in securities law, and what does the jump from 12% to 72% reveal about where corporate liability is now being located? *(Difficulty: High)*
+
+**Challenge**
+
+9. *Open-ended; points toward Chapter 2.* The chapter identifies the interrogation/delegation split as the variable that determined outcomes in the Anthropic trial — but admits it doesn't yet know how to teach someone to feel which mode they're in while they're in it. Design a simple self-monitoring practice — something a student could do daily during a job search — that would help them notice, in real time, whether they are interrogating or delegating. What signal would they be listening for? *(Difficulty: Challenge)*
 
 ---
 
@@ -127,6 +151,4 @@ The machine will do the typing. The judgment is yours, and it always was. The re
 
 [^inversion]: The "90% musician → 90% judgment" inversion is developed in "The Inversion: Why Software Engineers Are Becoming Judgment Workers" (uploaded essay, N. Bear Brown).
 
-[^spx]: Share of S&P 500 companies disclosing AI as a material risk rose from 12% (2023) to 72% (10-K filings through Aug 15 2025), per The Conference Board / ESGAUGE. Fortune, Oct 8 2025: https://fortune.com/2025/10/08/sp-500-companies-disclosed-ai-risk-10-k-forms-reputation-risk/ . A December 2025 update put the figure at 83%: https://www.conference-board.org/press/governing-AI-2026
-
-[^opt]: F-1 post-completion OPT permits no more than 90 aggregate days of unemployment (150 days total with a STEM OPT extension); exceeding it causes DHS to terminate the student's record with no grace period. USCIS Policy Manual, Vol. 2, Part F, Ch. 5: https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5
+[^spx]: Share of S&P 500 companies disclosing AI as a material risk rose from 12% (2023) to 72% (10-K filings through Aug 15 2025), per The Conference Board / ESGAUGE. Fortune, Oct 8 2025: https://fortune.com/2025/10/08/sp-500-companies-disclosed-ai-risk-10-k-forms-reputation-risk/. A December 2025 update put the figure at 83%: https://www.conference-board.org/press/governing-AI-2026
