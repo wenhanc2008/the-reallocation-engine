@@ -4,7 +4,7 @@ status: active
 updated: 2026-06-14
 canonical: [MYCROFT.md, DOMAIN.md, AGENTS.md, outline.md, book.md, chapters/]
 next:
-  - "Complete one honest, logged, gated end-to-end run (gap #4)"
+  - "Attest adequacy of the honest run (review reports/generated/oferta-2026-06-14.md) to promote `oferta` past DRAFT (gap #4)"
   - "Confirm the scorer [VERIFY] defaults (role_quality weight, Consider-band floor) vs docs/search-profile-design.md"
 blocked_by: null
 ---
@@ -21,13 +21,13 @@ _Read this first for current state._ `DOMAIN.md` = what the repo **is**; `logs/R
 - **Recipes:** all 42 carry lifecycle frontmatter; all are still `status: DRAFT`.
 
 ## The one thing that matters next
-**The honest run (gap #4).** No recipe has completed a logged, gated end-to-end run yet. Promoting any recipe past `DRAFT` requires it, and the schema/scorer-wiring work below exists to enable it.
+**Attest the honest run (gap #4).** The first gated, logged run is done — `oferta` (Ch.11 scorer) ran clean in sample mode and reproduces the book (see `reports/generated/oferta-2026-06-14.md`). The only thing left is *your* adequacy attestation, which promotes `oferta` past `DRAFT`.
 
 ## Open questions / decisions pending
 - **Run-envelope schema** — defined in `recipes/pipeline.md` (worked sample: `data/examples/run-envelope.json`). The remaining step is wiring the Ch.7–10 feeds to *emit* it, tied to the honest run.
 - **Scorer `[VERIFY]` defaults — checked:** neither Ch.11 nor the SDD pins them (confirmed unpinned). Open *authorial* call: `role_quality: 0.0` drops the Ch.9 role-quality signal from the composite — decide whether it should carry weight (and renormalise) before real decisions.
 
 ## Recently done (2026-06-14)
-- Decluttered the root; dual-licensed (MIT code / CC BY 4.0 book); set up large-file handling (samples + gitignore + a pre-commit size guard, documented in `DATA.md`); added the CLI-agnostic AI tooling guide and a repo audit under `docs/`; reconciled agentic "skill" → "recipe" across the manuscript (gap #7); defined the pipeline run-envelope schema; verified the scorer [VERIFY] weights — confirmed unpinned by Ch.11 and the SDD (#3).
+- Decluttered the root; dual-licensed (MIT code / CC BY 4.0 book); set up large-file handling (samples + gitignore + a pre-commit size guard, documented in `DATA.md`); added the CLI-agnostic AI tooling guide and a repo audit under `docs/`; reconciled agentic "skill" → "recipe" across the manuscript (gap #7); defined the pipeline run-envelope schema; verified the scorer [VERIFY] weights — confirmed unpinned by Ch.11 and the SDD (#3); executed the first gated, logged honest run (#4, sample mode — awaiting your adequacy attestation).
 
 _Update this file at the end of each working session: state, decisions, next actions. Keep it short — it's the current-state file, not a log._
