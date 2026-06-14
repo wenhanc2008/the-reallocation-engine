@@ -99,6 +99,14 @@ Running the engine produces decisions. A decision you can't reconstruct is one y
 
 ---
 
+## Key Terms
+
+**Recipe** — a named operation the engine runs (`scan`, `pipeline`, `oferta`, `tracker`, `pdf`), declared in a markdown file that states the scripts it calls, the data it reads, and what it logs; the runtime lives in `recipes/`. Elsewhere in agentic AI these are called **skills** (for example, Claude's Agent Skills). This book calls them *recipes* on purpose: a recipe is a procedure you can audit step by step, not a capacity — and the word "skill" is already spoken for here. In Chapters 9 and 13, "skill" means the O*NET / labour-market sense: the competencies a role demands and a résumé claims. One word with two meanings is exactly the silent ambiguity the engine exists to kill.
+
+**Active recipe** — a recipe that calls real scripts and reads real audits, so its output is a finding.
+
+**Draft / helper recipe** — a scaffold not yet verified, on a given run, to call scripts and write a log; treat its output as model judgment until you confirm otherwise.
+
 ## Exercises
 
 **Warm-up**
