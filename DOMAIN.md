@@ -11,6 +11,7 @@ Reallocates scarce application effort using five evidence components: company fu
 
 | Path | What it is |
 |---|---|
+| `status.md` | **current state, latest decisions, next actions — read first** |
 | `data/80-days-to-stay/` | upstream sponsorship/company source data — do not rewrite |
 | `data/sec/form-d/` | SEC Form D raw/extracted/processed |
 | `data/bls/` | BLS/O*NET/OEWS source + `data/bls/compact/` extracts |

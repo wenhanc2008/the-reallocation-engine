@@ -1,0 +1,36 @@
+---
+project: the-reallocation-engine
+status: active
+updated: 2026-06-14
+canonical: [MYCROFT.md, DOMAIN.md, AGENTS.md, outline.md, book.md, chapters/]
+next:
+  - "Define the run-envelope schema in recipes/pipeline.md (unblocks scorer feeds + the honest run)"
+  - "Complete one honest, logged, gated end-to-end run (gap #4)"
+  - "Confirm the scorer [VERIFY] defaults (role_quality weight, Consider-band floor) vs docs/search-profile-design.md"
+  - "Reconcile terminology: the book says 'skill', the repo says 'recipe' (gap #7)"
+blocked_by: null
+---
+
+# Status — The Reallocation Engine
+
+_Read this first for current state._ `DOMAIN.md` = what the repo **is**; `logs/RUN_LOG.md` = the full **history**; this file = **where we are now and what's next**.
+
+## Where things stand
+- **Manuscript:** 21 chapter files drafted (`chapters/00`–`99`), introduction through back matter.
+- **Pipeline (runnable today):** SEC Form D, BLS/O*NET extracts, ATS scan/liveness, resumes → PDF, the Ch.11 Bayesian role scorer (`npm run score`), plus `npm run doctor` and `npm run verify`.
+- **Context architecture:** root `AGENTS.md`/`CLAUDE.md` compile from `instructions/` modules; `.claude/` hooks (archive-guard + conformance) and a CI drift-guard are in place.
+- **Data:** full SEC/BLS datasets are gitignored; small samples are shipped — see `DATA.md`.
+- **Recipes:** all 42 carry lifecycle frontmatter; all are still `status: DRAFT`.
+
+## The one thing that matters next
+**The honest run (gap #4).** No recipe has completed a logged, gated end-to-end run yet. Promoting any recipe past `DRAFT` requires it, and the schema/scorer-wiring work below exists to enable it.
+
+## Open questions / decisions pending
+- **Run-envelope schema** is still `[TODO: DEFINE]` in `recipes/pipeline.md` — blocks wiring the Ch.7–10 evidence feeds into the scorer.
+- **Scorer `[VERIFY]` defaults:** the `role_quality` weight and the Consider-band floor reproduce the book but are not pinned by Ch.11 — confirm against `docs/search-profile-design.md` before using for real decisions.
+- **Terminology (gap #7):** the book says "skill," the repo says "recipe" — unreconciled.
+
+## Recently done (2026-06-14)
+- Decluttered the root; dual-licensed (MIT code / CC BY 4.0 book); set up large-file handling (samples + gitignore + a pre-commit size guard, documented in `DATA.md`); added the CLI-agnostic AI tooling guide and a repo audit under `docs/`.
+
+_Update this file at the end of each working session: state, decisions, next actions. Keep it short — it's the current-state file, not a log._
