@@ -9,7 +9,7 @@ The Department of Labor publishes every Labor Condition Application a U.S. emplo
 
 The whole architecture of this book is built on that distinction. One answer is fluent. The other is *true*. The discipline required to build on the second, and only the second, is what I mean by the verified-data contract.
 
-![Two columns: on the left, a model's fluent prose answer floating with no source anchor; on the right, a verified answer — filing count, approval rate, year — tied by solid connectors down to two labeled record sources, the Department of Labor and USCIS.](images/03-the-verified-data-contract-fig-01.png)
+![Two columns: on the left, a model's fluent prose answer floating with no source anchor; on the right, a verified answer — filing count, approval rate, year — tied by solid connectors down to two labeled record sources, the Department of Labor and USCIS.](../images/03-the-verified-data-contract-fig-01.png)
 *Figure 3.1 — Same question, two kinds of answer*
 
 <!-- → [INFOGRAPHIC: Two-column side-by-side: left column labeled "Model's answer" shows the fluent prose sentence with no source; right column labeled "Verified answer" shows the LCA count, approval rate, and year, traced to DOL and USCIS records. Caption: "Same question. One answer is plausible. One is checkable."] -->
@@ -26,7 +26,7 @@ That is it. One rule. The simplicity is intentional. Complex rules are negotiate
 
 The verified-data contract is not a philosophy statement. It is enforced by the architecture. There are three subsystems that produce the numbers this book is built on, and each of them writes to auditable records you can read and question.
 
-![A systems diagram: three source pipelines — funding, postings and liveness, role quality — each producing its own audit output, with all three audits converging into a single run log; small self-loops on each source mark a local-verified-data-first cache check.](images/03-the-verified-data-contract-fig-02.png)
+![A systems diagram: three source pipelines — funding, postings and liveness, role quality — each producing its own audit output, with all three audits converging into a single run log; small self-loops on each source mark a local-verified-data-first cache check.](../images/03-the-verified-data-contract-fig-02.png)
 *Figure 3.2 — Three pipelines, three audits, one log*
 
 <!-- → [DIAGRAM: Three boxes labeled scripts/sec/ (funding), scripts/ats/ (postings and liveness), scripts/bls/ (role quality), each with an arrow pointing to a corresponding *-audit.md output, all feeding into RUN_LOG.md. Caption: "The three pipelines and where their output lives — every number traces back through this graph."] -->
@@ -73,7 +73,7 @@ The discipline required is to watch the seam between the data and the reading of
 
 For any sentence in a system output, one question settles it: could this sentence have been produced by counting records? If yes, it must trace to a script output or an audit report. If it cannot be traced, it is not allowed to stand. If no — if it is a reading, a framing, a suggestion — it is model judgment, and it is allowed, but it must be visible as such.
 
-![A decision tree: one question — could this sentence have been produced by counting records? — splits into a data-claim branch that must trace to a script output or audit and a model-judgment branch that is allowed but must be labeled, with both branches reconverging on a final check that the label is visible in the output.](images/03-the-verified-data-contract-fig-03.png)
+![A decision tree: one question — could this sentence have been produced by counting records? — splits into a data-claim branch that must trace to a script output or audit and a model-judgment branch that is allowed but must be labeled, with both branches reconverging on a final check that the label is visible in the output.](../images/03-the-verified-data-contract-fig-03.png)
 *Figure 3.3 — The one-question test for every sentence*
 
 <!-- → [INFOGRAPHIC: Decision tree — "Could this sentence have been produced by counting records?" Yes branch leads to "Data claim: must trace to script output or audit." No branch leads to "Model judgment: allowed, but must be labeled." Both branches end at "Is the label visible in the output?" Caption: "The one-question test for every sentence in a mixed output."] -->
@@ -95,7 +95,7 @@ The contract stops you from building on fiction. It does not give you omniscienc
 
 *Table 3.2 — The floor the contract provides and the ceiling it doesn't claim to reach.*
 
-![A two-column matrix pairing each guarantee with its matching limit — counts are real versus the right thing was measured, gaps are labeled versus coverage is complete, decisions trace to records versus the records captured the full picture, judgments are labeled versus those judgments are correct — a wall of solid assurances facing a wall of honest caveats.](images/03-the-verified-data-contract-fig-04.png)
+![A two-column matrix pairing each guarantee with its matching limit — counts are real versus the right thing was measured, gaps are labeled versus coverage is complete, decisions trace to records versus the records captured the full picture, judgments are labeled versus those judgments are correct — a wall of solid assurances facing a wall of honest caveats.](../images/03-the-verified-data-contract-fig-04.png)
 *Figure 3.4 — The floor and the ceiling: guarantees vs. limits*
 
 ## The shape of everything that follows
@@ -296,17 +296,17 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 3.1 — Same question, two kinds of answer
-**Files:** images/03-the-verified-data-contract-fig-01.svg · d3/03-the-verified-data-contract-fig-01.html
+**Files:** ../images/03-the-verified-data-contract-fig-01.svg · ../d3/03-the-verified-data-contract-fig-01.html
 **Prompt:** Two columns on white — a model's fluent answer as a soft unanchored block on the left, the verified answer on the right as a compact data cluster bolted by solid connector lines down to two labeled record sources. Render the floating block in neutral gray and the grounded cluster and its connectors in the one red accent so groundedness reads as the whole contrast.
 
 ### Figure 3.2 — Three pipelines, three audits, one log
-**Files:** images/03-the-verified-data-contract-fig-02.svg · d3/03-the-verified-data-contract-fig-02.html
+**Files:** ../images/03-the-verified-data-contract-fig-02.svg · ../d3/03-the-verified-data-contract-fig-02.html
 **Prompt:** A left-to-right systems diagram on white — three stacked source pipelines, each with a solid ink arrow to its own audit node, all three converging into one run-log node. Keep sources and audits in neutral grays, mark the converging run log in the one red accent, and add a small cache self-loop on each source as a thin minor accent.
 
 ### Figure 3.3 — The one-question test for every sentence
-**Files:** images/03-the-verified-data-contract-fig-03.svg · d3/03-the-verified-data-contract-fig-03.html
+**Files:** ../images/03-the-verified-data-contract-fig-03.svg · ../d3/03-the-verified-data-contract-fig-03.html
 **Prompt:** A top-to-bottom decision tree on white, one entry diamond splitting into a data-claim branch and a model-judgment branch that reconverge at a final visibility diamond. Single-direction ink arrows, neutral-gray outcome nodes, and a single red accent on the data-claim path that must trace to a record.
 
 ### Figure 3.4 — The floor and the ceiling: guarantees vs. limits
-**Files:** images/03-the-verified-data-contract-fig-04.svg · d3/03-the-verified-data-contract-fig-04.html
+**Files:** ../images/03-the-verified-data-contract-fig-04.svg · ../d3/03-the-verified-data-contract-fig-04.html
 **Prompt:** A two-column matrix on white pairing four guarantees against four matching limits as rounded chips. Give guarantee chips a solid affirming mark in the one red accent and limit chips a hollow cautionary mark in neutral gray, so a wall of assurances faces a wall of honest caveats row by row.

@@ -27,7 +27,7 @@
 
 ## Path normalization
 
-- An agent initially wrote 19 references as `../images/…`; all chapter image references were normalized to the book-root-relative `images/…` form (matching both sibling books and this book's majority). All 66 references resolve.
+- An agent initially wrote 19 references as `../images/…`; all chapter image references were normalized to the `../images/…` form (relative to `chapters/`, matching both sibling books). All 66 references resolve.
 
 ## Invariants honored
 

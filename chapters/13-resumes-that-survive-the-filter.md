@@ -5,7 +5,7 @@ There is a particular kind of effort that feels productive but costs you exactly
 
 This is not a corner case. By 2025, roughly 82% of companies screened résumés with software, and about one in five candidates were auto-rejected with no human review.[^screening] The first reader of your résumé is a parser. The parser does not care that the document is beautiful. It cares whether it can extract structured text. A résumé a human would admire and a machine cannot read is a résumé no human will ever see.
 
-![Two parallel paths from "Submit résumé." The ATS-parseable path: the parser extracts name, title, and dates cleanly, leading to human review and an interview. The designed-layout path: the parser sees scrambled text, the application is auto-rejected, and no human ever opens it. The fork happens before any human judgment.](images/13-resumes-that-survive-the-filter-fig-01.png)
+![Two parallel paths from "Submit résumé." The ATS-parseable path: the parser extracts name, title, and dates cleanly, leading to human review and an interview. The designed-layout path: the parser sees scrambled text, the application is auto-rejected, and no human ever opens it. The fork happens before any human judgment.](../images/13-resumes-that-survive-the-filter-fig-01.png)
 *Figure 13.1 — The fork before the human*
 
 <!-- → [DIAGRAM: two parallel paths from "Submit résumé" — left path labeled "ATS-parseable": document → parser extracts name/title/dates cleanly → human review → interview; right path labeled "Designed layout": document → parser sees scrambled text or nothing → auto-reject → no human ever opens it; the fork happens before any human judgment] -->
@@ -44,7 +44,7 @@ The Markdown version, run through `resumes:pdf`: the PDF looks clean. Run the pa
 
 The same content in a two-column designed template: paste it out. The left and right columns interleave line by line. "Data Analyst, 2023–2024" lands in the middle of an unrelated bullet from the other column. The skills section, rendered as little bars with labels, produces nothing — no text extracted at all. The parser reading that document cannot reliably locate a single job title. It has a name problem, a date problem, and a skill problem, all at once, and the human who might have found the candidate compelling never gets the chance to try.
 
-![Side-by-side paste-test output for the same CV rendered two ways. Left: clean linear text with name, title, dates, and bullets in order. Right: scrambled, interleaved text with sections that produced no text marked in red. The right side is what a typical two-column designed template actually produces when parsed.](images/13-resumes-that-survive-the-filter-fig-02.png)
+![Side-by-side paste-test output for the same CV rendered two ways. Left: clean linear text with name, title, dates, and bullets in order. Right: scrambled, interleaved text with sections that produced no text marked in red. The right side is what a typical two-column designed template actually produces when parsed.](../images/13-resumes-that-survive-the-filter-fig-02.png)
 *Figure 13.2 — What you designed vs. what the parser extracted*
 
 <!-- → [CHART: side-by-side paste-test output for the same CV rendered two ways — left: clean linear text with name, title, dates, bullets in order; right: scrambled interleaving with missing sections marked in red; caption should note that the right-side output is what a typical two-column designed template actually produces when parsed] -->
@@ -65,7 +65,7 @@ Now let me say what the structures are that break parsers, because "don't use a 
 
 The safe structures are their opposites: a single-column flow, real text characters for every piece of content that needs to be extracted, standard headings as plain words, dates in a consistent parseable format next to the roles they describe. These are not design constraints that prevent a good résumé. They are the constraints that ensure the résumé is read.
 
-![A quick-reference visual contrasting résumé safe zones and danger zones. Safe: single-column body text, standard section headers as text, dates as plain text adjacent to roles, skills as a plain-text list, real text characters throughout. Danger: two-column layout, header graphic, skill bars, table-based layout, any text inside an image.](images/13-resumes-that-survive-the-filter-fig-03.png)
+![A quick-reference visual contrasting résumé safe zones and danger zones. Safe: single-column body text, standard section headers as text, dates as plain text adjacent to roles, skills as a plain-text list, real text characters throughout. Danger: two-column layout, header graphic, skill bars, table-based layout, any text inside an image.](../images/13-resumes-that-survive-the-filter-fig-03.png)
 *Figure 13.3 — Résumé safe zones and danger zones*
 
 <!-- → [INFOGRAPHIC: a labeled résumé showing "safe zones" and "danger zones" — safe: single-column body text, standard section headers as text, dates as plain text adjacent to roles; danger: two-column layout, header graphic, skill bars, table-based layout, any text in an image; designed as a quick-reference visual a student can check their own document against] -->
@@ -78,7 +78,7 @@ The pipeline can guarantee a parseable document. It cannot know which of your tr
 
 The résumé, in a market where roughly 82% of companies run applications through software first, is not where you win. It is a gate you must not lose at. The winning moves — portfolio, proof of capability, demonstrated skill — happen elsewhere. The résumé's job is to get through the first filter intact and give the human on the other side something true and specific to respond to. Those are two requirements, and they are both necessary. An ATS-safe PDF with weak content still fails the human.
 
-![A two-stage model of the résumé's job. Stage 1, the ATS filter, asks: can the parser find your name, title, and dates? Stage 2, human review, asks: is the content specific and true enough to earn a call? An arrow between them notes that what survives Stage 1 is the floor; Stage 2 is where content quality decides.](images/13-resumes-that-survive-the-filter-fig-04.png)
+![A two-stage model of the résumé's job. Stage 1, the ATS filter, asks: can the parser find your name, title, and dates? Stage 2, human review, asks: is the content specific and true enough to earn a call? An arrow between them notes that what survives Stage 1 is the floor; Stage 2 is where content quality decides.](../images/13-resumes-that-survive-the-filter-fig-04.png)
 *Figure 13.4 — Two-stage résumé job: parse floor, then human*
 
 <!-- → [DIAGRAM: a two-stage model showing the résumé's job — Stage 1: "ATS filter" with the criterion "Can the parser find your name, title, and dates?" — Stage 2: "Human review" with the criterion "Is the content specific and true enough to earn a call?" — with an arrow between them labeled "What survives Stage 1 is the floor; Stage 2 is where content quality decides"] -->
@@ -271,17 +271,17 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 13.1 — The fork before the human
-**Files:** images/13-resumes-that-survive-the-filter-fig-01.svg · d3/13-resumes-that-survive-the-filter-fig-01.html
+**Files:** ../images/13-resumes-that-survive-the-filter-fig-01.svg · ../d3/13-resumes-that-survive-the-filter-fig-01.html
 **Prompt:** Brutalist process flowchart on white: "Submit résumé" forks into two paths before any human acts. The ATS-parseable path (red accent) runs parser → human review → interview; the designed-layout path (ink/gray) runs scrambled parse → auto-reject → no human opens it. Single-headed arrows, ink boxes, one ochre rule under the caption, no shadows or gradients.
 
 ### Figure 13.2 — What you designed vs. what the parser extracted
-**Files:** images/13-resumes-that-survive-the-filter-fig-02.svg · d3/13-resumes-that-survive-the-filter-fig-02.html
+**Files:** ../images/13-resumes-that-survive-the-filter-fig-02.svg · ../d3/13-resumes-that-survive-the-filter-fig-02.html
 **Prompt:** Brutalist two-panel comparison on white: the same CV pasted out two ways. Left panel shows clean linear text in JetBrains Mono (name, title, dates, bullets in order); right panel shows interleaved, scrambled text with missing fields flagged in red. Ink frame, one red accent for the failures, no decoration.
 
 ### Figure 13.3 — Résumé safe zones and danger zones
-**Files:** images/13-resumes-that-survive-the-filter-fig-03.svg · d3/13-resumes-that-survive-the-filter-fig-03.html
+**Files:** ../images/13-resumes-that-survive-the-filter-fig-03.svg · ../d3/13-resumes-that-survive-the-filter-fig-03.html
 **Prompt:** Brutalist two-column quick-reference on white: a "safe zones" list (single-column text, text headers, plain-text dates, plain-text skills) against a "danger zones" list (two-column, header graphic, skill bars, table layout, text-in-image) drawn with dashed borders. Red accent on safe, gray on danger, no gradients or shadows.
 
 ### Figure 13.4 — Two-stage résumé job: parse floor, then human
-**Files:** images/13-resumes-that-survive-the-filter-fig-04.svg · d3/13-resumes-that-survive-the-filter-fig-04.html
+**Files:** ../images/13-resumes-that-survive-the-filter-fig-04.svg · ../d3/13-resumes-that-survive-the-filter-fig-04.html
 **Prompt:** Brutalist two-stage diagram on white: Stage 1 "ATS filter" (gray fill, criterion: can the parser find name/title/dates?) with a single-headed arrow to Stage 2 "Human review" (red outline, criterion: specific and true enough to earn a call?). An ochre rule underlines the caption that Stage 1 is the floor and Stage 2 is where quality decides. No shadows or gradients.

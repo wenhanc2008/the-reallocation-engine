@@ -29,7 +29,7 @@ Watch how this shows up in how work is actually graded. In courses that permit A
 
 So the question "can you do the work?" has split into two questions that now have wildly different answers. Can you produce the artifact? Yes — so can everyone, instantly. Can you tell whether the artifact is any good? That is the only question left with a scarce answer. And it is the one the screen never asks you.
 
-![Two aligned stacked bars. The first splits total value into a large procedural-competence base and a smaller judgment cap. The second recuts the same split by supplier — the procedural base is machine-suppliable, the small judgment cap is human-exclusive.](images/01-the-fluency-trap-fig-01.png)
+![Two aligned stacked bars. The first splits total value into a large procedural-competence base and a smaller judgment cap. The second recuts the same split by supplier — the procedural base is machine-suppliable, the small judgment cap is human-exclusive.](../images/01-the-fluency-trap-fig-01.png)
 *Figure 1.1 — The value split: who can supply the work*
 
 <!-- → [CHART: two-bar column chart showing the value split — "Procedural competence" (~75-80%) vs "Judgment" (~20-25%) as share of grade/market value; a second panel shows the same split for "Who can supply it" — AI can supply the first bar almost entirely, humans exclusively supply the second; caption should read: "The question 'can you do the work?' has split. One half is now free. The other has not moved."] -->
@@ -50,7 +50,7 @@ The hand-coding group averaged 67 percent. The AI-assisted group averaged 50 per
 
 And here is the detail that turns a finding into a warning. Inside the AI group, behavior split the outcome cleanly. The engineers who used the model to *interrogate* — asking it conceptual questions, challenging its answers, forcing themselves to understand what it produced — scored 65 percent or higher. The engineers who used it to *delegate* — describe the problem, accept the output, move on — scored below 40.[^anthropic] Same tool. Same task. Opposite result. The variable was not the AI. It was whether the human kept doing the judgment work while the machine did the typing.
 
-![Three vertical bars. Hand-coding and AI-plus-interrogation sit at nearly the same height; AI-plus-delegation drops off sharply, with a faint reference line linking the two high bars.](images/01-the-fluency-trap-fig-02.png)
+![Three vertical bars. Hand-coding and AI-plus-interrogation sit at nearly the same height; AI-plus-delegation drops off sharply, with a faint reference line linking the two high bars.](../images/01-the-fluency-trap-fig-02.png)
 *Figure 1.2 — The Anthropic RCT: comprehension by how the tool was used*
 
 <!-- → [INFOGRAPHIC: three-column comparison — "Hand-coding" (67% comprehension quiz average), "AI + interrogation" (≥65%), "AI + delegation" (<40%); visual treatment should emphasize that the middle and left columns converge while the right column falls off sharply; caption: "The tool is identical in the middle and right columns. The variable is what the human does while it runs."] -->
@@ -77,7 +77,7 @@ This is the inversion that has happened to skilled work across the board. A soft
 
 And the market is pricing it exactly that way. As of 2025, AI had moved from a curiosity to a board-level liability: the share of S&P 500 companies naming AI as a *material risk* in their annual filings jumped from 12 percent in 2023 to 72 percent in 2025.[^spx] A material risk is not hype — it is a legal disclosure that this could hurt the company badly enough that shareholders must be warned. Seven hundred of America's largest firms, in the dry language of securities law, are telling their investors that getting the judgment wrong about these fluent machines is a danger to the enterprise. The thing they are afraid of is not that the AI cannot execute. It is that someone will trust a fluent output that was wrong.
 
-![A single rising line across three time points — about 12 percent in 2023, 72 percent in 2025, and 83 percent in the late-2025 update — with the steep first segment emphasized as the moment hype becomes liability.](images/01-the-fluency-trap-fig-03.png)
+![A single rising line across three time points — about 12 percent in 2023, 72 percent in 2025, and 83 percent in the late-2025 update — with the steep first segment emphasized as the moment hype becomes liability.](../images/01-the-fluency-trap-fig-03.png)
 *Figure 1.3 — AI as material risk: S&P 500 disclosures, 2023–2025*
 
 <!-- → [CHART: line chart, 2023–2025, showing share of S&P 500 companies disclosing AI as material risk in 10-K filings — from 12% to 72% to 83% (Conference Board Dec 2025 update); annotate the 2023→2025 jump with a label reading "hype becomes liability"; caption: "Seven hundred of America's largest companies are telling investors in legal language: trusting the wrong fluent output is an enterprise risk."] -->
@@ -90,7 +90,7 @@ If you are an international student in the United States on F-1 status, working 
 
 Here is the clock. On post-completion OPT, you may accrue no more than ninety cumulative days of unemployment across your entire authorization period. Not business days — calendar days. Weekends count. Holidays count. The counter starts the day your work authorization begins and does not stop. Exceed it, and the Department of Homeland Security terminates your immigration record. There is no grace period. You must leave the country.[^opt] This is why the system at the heart of this book budgets to *eighty* days, not ninety — you want a margin between you and a cliff that does not forgive.
 
-![A single horizontal authorization bar with a filled cumulative-unemployment segment, a dashed marker at 80 days labeled the book's working limit, and a solid hard stop at 90 days where the immigration record is terminated with no grace period.](images/01-the-fluency-trap-fig-04.png)
+![A single horizontal authorization bar with a filled cumulative-unemployment segment, a dashed marker at 80 days labeled the book's working limit, and a solid hard stop at 90 days where the immigration record is terminated with no grace period.](../images/01-the-fluency-trap-fig-04.png)
 *Figure 1.4 — The 90-day OPT unemployment clock*
 
 <!-- → [INFOGRAPHIC: timeline diagram showing the 90-day unemployment clock — a horizontal bar representing the OPT authorization period, with a red segment marking cumulative unemployment days, a dashed line at 80 days labeled "this book's working limit," and a hard stop at 90 labeled "DHS terminates record / no grace period"; annotate that weekends and holidays count; caption: "The clock does not distinguish between a Tuesday and a Sunday. It runs."] -->
@@ -329,17 +329,17 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 1.1 — The value split: who can supply the work
-**Files:** images/01-the-fluency-trap-fig-01.svg · d3/01-the-fluency-trap-fig-01.html
+**Files:** ../images/01-the-fluency-trap-fig-01.svg · ../d3/01-the-fluency-trap-fig-01.html
 **Prompt:** Two aligned stacked bars on white, the same value split recut by a second question. Render procedural competence as a tall neutral-gray base and judgment as a small cap in the one red accent; align the segment boundary across both bars with a dashed ink rule, zero baseline anchored.
 
 ### Figure 1.2 — The Anthropic RCT: comprehension by how the tool was used
-**Files:** images/01-the-fluency-trap-fig-02.svg · d3/01-the-fluency-trap-fig-02.html
+**Files:** ../images/01-the-fluency-trap-fig-02.svg · ../d3/01-the-fluency-trap-fig-02.html
 **Prompt:** Three vertical bars on white at zero baseline — hand-coding and AI-plus-interrogation near-level, AI-plus-delegation dropping off a cliff. Keep the high bars in neutral ink-gray and let the convergence read through a faint ochre reference line; reserve red for nothing but the chapter's brand mark.
 
 ### Figure 1.3 — AI as material risk: S&P 500 disclosures, 2023–2025
-**Files:** images/01-the-fluency-trap-fig-03.svg · d3/01-the-fluency-trap-fig-03.html
+**Files:** ../images/01-the-fluency-trap-fig-03.svg · ../d3/01-the-fluency-trap-fig-03.html
 **Prompt:** A single ascending line across three time points on a zero-anchored percent axis, nodes marked in ink. Draw the line in the one red accent and emphasize the steep first segment where hype becomes liability with a soft ochre slope band, gridlines as faint border hairlines only.
 
 ### Figure 1.4 — The 90-day OPT unemployment clock
-**Files:** images/01-the-fluency-trap-fig-04.svg · d3/01-the-fluency-trap-fig-04.html
+**Files:** ../images/01-the-fluency-trap-fig-04.svg · ../d3/01-the-fluency-trap-fig-04.html
 **Prompt:** One horizontal authorization bar on white with uniform day ticks, a dashed ink marker at the 80-day working limit and a solid red hard stop at 90 days. The 80-to-90 gap reads as a deliberate safety margin; no calendar or clock imagery, the bar and its two markers carry all the meaning.

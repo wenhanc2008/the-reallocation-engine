@@ -5,7 +5,7 @@ Here is a thing that happens, and it is quietly devastating when it does. A stud
 
 No filter in Chapters 7 through 7 would have caught this. Sponsorship was real. The role was live. The quality was high. The thing that killed it was time, and time is the one constraint that is *yours specifically* — invisible to the company, invisible to every scorer that does not know your dates.
 
-![A horizontal hiring timeline — application, phone screen, technical rounds, panel, offer — crossed by a single bold vertical line marking the end of work authorization; the line falls between the technical rounds and the offer, so the offer sits on the unreachable side of the cliff.](images/10-the-visa-timeline-manager-fig-01.png)
+![A horizontal hiring timeline — application, phone screen, technical rounds, panel, offer — crossed by a single bold vertical line marking the end of work authorization; the line falls between the technical rounds and the offer, so the offer sits on the unreachable side of the cliff.](../images/10-the-visa-timeline-manager-fig-01.png)
 *Figure 10.1 — The calendar gate: a process that runs past authorization*
 
 <!-- → [DIAGRAM: a horizontal timeline showing: "Student applies" → "Phone screen" → "Technical rounds" → "Panel interview" → "Offer" — with a vertical red line labeled "Authorization ends" falling between "Technical rounds" and "Offer"; the visual makes visceral that everything after the red line is unreachable regardless of how good the news is] -->
@@ -22,7 +22,7 @@ The second is the **STEM OPT extension**. If your degree is in a qualifying STEM
 
 The third is the **H-1B lottery window** — the annual cycle of registration, selection, and petition that determines whether a path past OPT exists with a given employer in a given year. The lottery runs on a fixed annual schedule. If your authorization expires before the next window resolves, the H-1B path is not available to you regardless of how willing the employer is to sponsor. Sponsorship and the ability to act on sponsorship are different things, and the lottery timing is what separates them.
 
-![Three stacked horizontal bars on a shared time axis: the standard OPT window with its 90-day unemployment ceiling, the longer STEM OPT extension with its 150-day ceiling, and the fixed annual H-1B lottery window with registration and cap-subject start markers; the true runway is the combination of all three, not just the first bar.](images/10-the-visa-timeline-manager-fig-02.png)
+![Three stacked horizontal bars on a shared time axis: the standard OPT window with its 90-day unemployment ceiling, the longer STEM OPT extension with its 150-day ceiling, and the fixed annual H-1B lottery window with registration and cap-subject start markers; the true runway is the combination of all three, not just the first bar.](../images/10-the-visa-timeline-manager-fig-02.png)
 *Figure 10.2 — Three windows of an international student's runway*
 
 <!-- → [INFOGRAPHIC: three stacked horizontal bars representing OPT window, STEM OPT extension, and H-1B lottery window — annotated with key thresholds: 90-day unemployment ceiling, 150-day ceiling, lottery registration month, cap-subject start date — showing how a student's runway is the combination of all three, not just the first bar] -->
@@ -74,7 +74,7 @@ The student is a STEM-eligible master's graduate. OPT ends in roughly five month
 
 **Role C** is a mid-size firm, roughly twelve-week process. Expected start lands inside authorization but eats most of the buffer. Factor ≈ 0.6 — kept, but penalized relative to B. If Role C and Role B were otherwise equal, the engine prefers B, because the candidate who lands B does not spend the last weeks of their authorization anxiously waiting for Role C's offer.
 
-![A horizontal bar chart of three roles, each bar running from today to its expected start date, against a solid vertical line for the authorization end and a dotted line for the 80-day buffer target: Role A extends past the authorization line (skip-regardless), Role B finishes well short of the buffer (comfortable), and Role C finishes between the buffer and the cliff (kept but penalized).](images/10-the-visa-timeline-manager-fig-03.png)
+![A horizontal bar chart of three roles, each bar running from today to its expected start date, against a solid vertical line for the authorization end and a dotted line for the 80-day buffer target: Role A extends past the authorization line (skip-regardless), Role B finishes well short of the buffer (comfortable), and Role C finishes between the buffer and the cliff (kept but penalized).](../images/10-the-visa-timeline-manager-fig-03.png)
 *Figure 10.3 — Three roles against the authorization cliff*
 
 <!-- → [CHART: a horizontal bar chart showing the three roles with their expected start dates plotted against the student's authorization end date — Role A's bar extends past the end date (red), Role B finishes well short (green), Role C finishes just inside (yellow); a vertical dotted line marks the 80-day buffer target] -->
@@ -89,7 +89,7 @@ The factor knows your dates and a company's typical pace. It does not know that 
 
 The difference between eligible and ineligible for a STEM extension can hinge on a detail — the CIP code on your transcript, a filing timing question, a program classification — that only an immigration professional should rule on. The factor gates out the impossible. The negotiable edges and the legal specifics stay human. This is not a caveat to be skim-read; it is load-bearing. A student who treats a factor of 0.4 as authorization to apply to a borderline role without consulting their DSO has misread what the number is. It is a planning multiplier, not legal advice.
 
-![A decision tree from a single "factor computed" root: a factor of 0 branches to skip-regardless and reallocate the freed time; a low-but-positive factor branches to apply only if strong on the other factors and an accelerated process is genuinely possible; a high factor branches to no timeline objection, let the other factors decide; an advisor-check node flags that uncertain eligibility goes to a qualified advisor, not the system.](images/10-the-visa-timeline-manager-fig-04.png)
+![A decision tree from a single "factor computed" root: a factor of 0 branches to skip-regardless and reallocate the freed time; a low-but-positive factor branches to apply only if strong on the other factors and an accelerated process is genuinely possible; a high factor branches to no timeline objection, let the other factors decide; an advisor-check node flags that uncertain eligibility goes to a qualified advisor, not the system.](../images/10-the-visa-timeline-manager-fig-04.png)
 *Figure 10.4 — Timeline-factor decision tree*
 
 <!-- → [DIAGRAM: a decision tree beginning at "Factor computed" — branch from 0 to "Skip regardless / reallocate time (Ch. 2)," branch from low but > 0 to "Apply only if strong on other factors AND accelerated process is possible," branch from high to "No timeline objection — let sponsorship, fit, liveness, quality decide"; each terminal node also shows a human-judgment check: "Verify with DSO if STEM eligibility is uncertain"] -->
@@ -283,19 +283,19 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 10.1 — The calendar gate: a process that runs past authorization
-**Files:** images/10-the-visa-timeline-manager-fig-01.svg · d3/10-the-visa-timeline-manager-fig-01.html
+**Files:** ../images/10-the-visa-timeline-manager-fig-01.svg · ../d3/10-the-visa-timeline-manager-fig-01.html
 **Prompt:** Brutalist horizontal timeline of hiring stages (application → phone screen → technical rounds → panel → offer) with a single bold vertical authorization-ends line falling between technical rounds and offer; render everything past the line muted/blocked to make the post-cliff offer visibly unreachable. Red for the cliff and unreachable region, ink for reachable stages, single-direction arrows.
 
 ### Figure 10.2 — Three windows of an international student's runway
-**Files:** images/10-the-visa-timeline-manager-fig-02.svg · d3/10-the-visa-timeline-manager-fig-02.html
+**Files:** ../images/10-the-visa-timeline-manager-fig-02.svg · ../d3/10-the-visa-timeline-manager-fig-02.html
 **Prompt:** Brutalist three stacked horizontal bars on a shared left-anchored time axis: standard OPT (90-day ceiling marker), STEM extension (longer, 150-day ceiling marker), and the H-1B lottery as a fixed annual window with registration and cap-subject markers. Distinct neutral hues per window, one accent, hairline tick markers; the runway is the combination, not the first bar.
 
 ### Figure 10.3 — Three roles against the authorization cliff
-**Files:** images/10-the-visa-timeline-manager-fig-03.svg · d3/10-the-visa-timeline-manager-fig-03.html
+**Files:** ../images/10-the-visa-timeline-manager-fig-03.svg · ../d3/10-the-visa-timeline-manager-fig-03.html
 **Prompt:** Brutalist horizontal bar chart anchored at a common origin (today), three role bars to their expected start dates, with a solid authorization-end line and a dotted buffer-target line. Role A past the cliff (red, skip), Role B short of the buffer (active hue, comfortable), Role C between buffer and cliff (ochre, kept-but-penalized). Honest shared origin, mono axis labels.
 
 ### Figure 10.4 — Timeline-factor decision tree
-**Files:** images/10-the-visa-timeline-manager-fig-04.svg · d3/10-the-visa-timeline-manager-fig-04.html
+**Files:** ../images/10-the-visa-timeline-manager-fig-04.svg · ../d3/10-the-visa-timeline-manager-fig-04.html
 **Prompt:** Brutalist top-down decision tree from a "factor computed" root: branch 0 → skip-regardless / reallocate; branch low>0 → apply only if strong elsewhere and acceleration possible; branch high → no timeline objection. Attach an advisor-check side node (verify uncertain eligibility with a qualified advisor). Red for skip, ochre for the conditional middle, active hue for the clear branch; single-direction arrows.
 
 [^opt]: F-1 post-completion OPT: max 90 aggregate days of unemployment (150 with STEM OPT extension); exceeding it terminates the record with no grace period. USCIS Policy Manual, Vol. 2, Part F, Ch. 5: https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5

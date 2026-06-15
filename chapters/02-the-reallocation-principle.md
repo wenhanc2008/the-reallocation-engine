@@ -21,7 +21,7 @@ The answer has to do with what feedback looks like in a broken system. Volume pr
 
 What we are actually doing is optimizing for throughput in a channel that has been quietly devalued by the very automation we learned to use.
 
-![Three vertical bars on a zero baseline — cold application near 0.2 percent reads as a thin sliver beside employee referral at 2 to 4 percent and direct network introduction at 5 to 10 percent, preserving the order-of-magnitude gap.](images/02-the-reallocation-principle-fig-01.png)
+![Three vertical bars on a zero baseline — cold application near 0.2 percent reads as a thin sliver beside employee referral at 2 to 4 percent and direct network introduction at 5 to 10 percent, preserving the order-of-magnitude gap.](../images/02-the-reallocation-principle-fig-01.png)
 *Figure 2.1 — Conversion rate by channel*
 
 <!-- → [CHART: bar chart comparing conversion rates across three channels — cold application (~0.2%), employee referral (~2–4%), direct network introduction (~5–10%) — student should see the order-of-magnitude gap between channels, not just the absolute numbers] -->
@@ -38,7 +38,7 @@ The expected return on an hour is not constant across activities. An hour of tar
 
 Once you see the return structure, the reallocation is obvious. Two hours applying — targeted, filtered, not sprayed. Three hours networking. Three hours on portfolio. I call this the 3-3-2 day, and the rest of this book is built to make it actually achievable rather than just strategically correct.
 
-![Three proportional columns on a common baseline — a short two-hour applying column beside two taller three-hour columns for networking and portfolio, with the networking column tied to the 54 percent hire-via-connections figure and the portfolio column to the 56 percent validated-skill premium.](images/02-the-reallocation-principle-fig-02.png)
+![Three proportional columns on a common baseline — a short two-hour applying column beside two taller three-hour columns for networking and portfolio, with the networking column tied to the 54 percent hire-via-connections figure and the portfolio column to the 56 percent validated-skill premium.](../images/02-the-reallocation-principle-fig-02.png)
 *Figure 2.2 — The 3-3-2 day*
 
 <!-- → [INFOGRAPHIC: three-column layout showing the 3-3-2 split — "2 hrs: Targeted Applying," "3 hrs: Networking," "3 hrs: Portfolio" — with the 54% and 56% figures anchored to the networking and portfolio columns respectively] -->
@@ -77,7 +77,7 @@ The mechanism is not magic. The referrals work because they bypass the parser. T
 
 *Table 2.1 — The same week, two strategies: fewer applications, more movement. The left column wins only on raw volume; the right column wins on every outcome that matters.*
 
-![Two job-search weeks compared row by row with paired horizontal bars — the spray-and-pray week wins only on raw application count, while the 3-3-2 week wins on recruiter screens, referrals, and portfolio pieces.](images/02-the-reallocation-principle-fig-03.png)
+![Two job-search weeks compared row by row with paired horizontal bars — the spray-and-pray week wins only on raw application count, while the 3-3-2 week wins on recruiter screens, referrals, and portfolio pieces.](../images/02-the-reallocation-principle-fig-03.png)
 *Figure 2.3 — Spray-and-pray vs. 3-3-2: the input-output flip*
 
 ---
@@ -90,7 +90,7 @@ The reallocation principle is a default for where returns *usually* lie. The per
 
 This matters because there is a failure mode on both ends. The applicant who ignores the principle and keeps spraying is the one we started with — disciplined, misallocated, watching the counter go up. But the applicant who treats 3-3-2 as a ritual and never deviates is making a different mistake: substituting a heuristic for judgment. The whole argument of this book is that judgment is what you bring, and the tools are what handle the parts that do not require it.
 
-![A top-to-bottom decision tree for a freed hour — first gate routes to networking if fewer than about ten live conversations are going, second gate routes to portfolio if no deployed metric-bearing project exists from the last ninety days, and only when both are healthy does the hour go to additional targeted applications.](images/02-the-reallocation-principle-fig-04.png)
+![A top-to-bottom decision tree for a freed hour — first gate routes to networking if fewer than about ten live conversations are going, second gate routes to portfolio if no deployed metric-bearing project exists from the last ninety days, and only when both are healthy does the hour go to additional targeted applications.](../images/02-the-reallocation-principle-fig-04.png)
 *Figure 2.4 — Where does a freed hour go?*
 
 <!-- → [DIAGRAM: decision tree for "where does a freed hour go?" — branch: fewer than ~10 live conversations → send to networking; portfolio has no deployed metric-bearing project from last 90 days → send to portfolio; both healthy → additional targeted applications; student should see this as a rule, not a preference] -->
@@ -313,17 +313,17 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 2.1 — Conversion rate by channel
-**Files:** images/02-the-reallocation-principle-fig-01.svg · d3/02-the-reallocation-principle-fig-01.html
+**Files:** ../images/02-the-reallocation-principle-fig-01.svg · ../d3/02-the-reallocation-principle-fig-01.html
 **Prompt:** Three vertical bars on white at a zero baseline, scaled so the order-of-magnitude gap reads honestly — cold application a near-flat sliver beside referral and direct introduction. Render the devalued cold-application bar in the one red accent and keep referral and direct introduction in neutral ink-gray so the eye lands on what the chapter devalues.
 
 ### Figure 2.2 — The 3-3-2 day
-**Files:** images/02-the-reallocation-principle-fig-02.svg · d3/02-the-reallocation-principle-fig-02.html
+**Files:** ../images/02-the-reallocation-principle-fig-02.svg · ../d3/02-the-reallocation-principle-fig-02.html
 **Prompt:** Three proportional columns on a common baseline sized strictly two-three-three for applying, networking, and portfolio. Keep the columns in neutral grays with a single red accent marking the networking column as the high-return channel; the shortest applying column should read as deliberate, not deficient.
 
 ### Figure 2.3 — Spray-and-pray vs. 3-3-2: the input-output flip
-**Files:** images/02-the-reallocation-principle-fig-03.svg · d3/02-the-reallocation-principle-fig-03.html
+**Files:** ../images/02-the-reallocation-principle-fig-03.svg · ../d3/02-the-reallocation-principle-fig-03.html
 **Prompt:** Two columns of paired horizontal bars on white across six shared outcome rows, one color per week held consistent down the page. Let the spray-and-pray week win only on raw application count in neutral gray and the 3-3-2 week win every outcome row that matters in the one red accent.
 
 ### Figure 2.4 — Where does a freed hour go?
-**Files:** images/02-the-reallocation-principle-fig-04.svg · d3/02-the-reallocation-principle-fig-04.html
+**Files:** ../images/02-the-reallocation-principle-fig-04.svg · ../d3/02-the-reallocation-principle-fig-04.html
 **Prompt:** A top-to-bottom decision tree on white with two diamond gates and three terminal action nodes, single-direction ink arrows throughout. Route networking and portfolio off the early gates in neutral tones and make the additional-applications terminal visually subordinate, reached last after both gates, with a single red accent on the active path.

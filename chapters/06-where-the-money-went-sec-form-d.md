@@ -8,7 +8,7 @@ There is a peculiar asymmetry in the way most people search for jobs. They look 
 
 The Securities and Exchange Commission maintains a public record of every private fundraise above a certain threshold. When a company closes a seed round, a Series A, a bridge round — when it takes in outside capital through what's called a private offering — it is legally required to file a form disclosing that fact. The form is called Form D. It has been sitting in a publicly accessible database for years, structured and searchable, containing the company name, its address, its industry, the amount raised, and when. In one snapshot of that record, there were over **568,000** companies that had reported raising money, and nearly **247,000** of them had raised at least five million dollars.[^formd]
 
-![A large outer rectangle represents roughly 568,000 companies that filed Form D; a smaller nested rectangle represents the roughly 247,000 that raised at least five million dollars.](images/06-where-the-money-went-sec-form-d-fig-01.png)
+![A large outer rectangle represents roughly 568,000 companies that filed Form D; a smaller nested rectangle represents the roughly 247,000 that raised at least five million dollars.](../images/06-where-the-money-went-sec-form-d-fig-01.png)
 *Figure 6.1 — The Form D corpus and the funded subset*
 
 Almost no job seeker has ever looked at it.
@@ -50,7 +50,7 @@ python sec-domain-inference.py
 python sec-flatten.py
 ```
 
-![A seven-step linear pipeline arranged across three horizontal layer bands — raw, extracted, processed — with each step descending toward the processed layer as it moves left to right, and a small audit-receipt marker beside every step.](images/06-where-the-money-went-sec-form-d-fig-02.png)
+![A seven-step linear pipeline arranged across three horizontal layer bands — raw, extracted, processed — with each step descending toward the processed layer as it moves left to right, and a small audit-receipt marker beside every step.](../images/06-where-the-money-went-sec-form-d-fig-02.png)
 *Figure 6.2 — The seven-step Form D pipeline across three layers*
 
 Each step writes its output into the appropriate layer of `data/sec/form-d/` and leaves an audit file alongside it. The final product is a flat table: one row per funded company, with amount, date, industry, location, and — where the inference engine succeeded — a web domain. That last column matters more than it might seem. A company name without a website is a dead end. The domain inference step tries to give you a way in.
@@ -65,7 +65,7 @@ It is not.
 
 A two-hundred-million-dollar late-stage round is not a hiring opportunity in the same sense as a six-million-dollar seed. The company that raised two hundred million is probably large enough to have a formal recruiting apparatus — a parser-gated application system, a hundred applicants for every role, a process designed to process. The company that raised six million at fourteen people is a founder who will read your email. The signal in Form D is not the size of the raise. The signal is the combination of recency and company size. A small company that just got funded is a company where you can make a difference and where the people deciding to hire you will know your name.
 
-![A two-by-two quadrant map with funding recency on the horizontal axis and company size on the vertical axis; the small-and-recently-funded bottom-right quadrant is emphasized as the target zone, while large-company quadrants are marked as lower-value leads regardless of raise size.](images/06-where-the-money-went-sec-form-d-fig-03.png)
+![A two-by-two quadrant map with funding recency on the horizontal axis and company size on the vertical axis; the small-and-recently-funded bottom-right quadrant is emphasized as the target zone, while large-company quadrants are marked as lower-value leads regardless of raise size.](../images/06-where-the-money-went-sec-form-d-fig-03.png)
 *Figure 6.3 — Recency × size beats raise amount*
 
 Recency degrades. The hiring surge that follows a funding announcement is real and it is time-limited. In the quarters immediately after a raise, a company is actively trying to build the team the investors paid for. Eighteen months later, the urgency has passed — either they hired or they didn't, and the fresh-capital energy has moved on to execution. When you filter the table, the recency cutoff matters: within twelve months is a signal; beyond eighteen months is history.
@@ -86,7 +86,7 @@ Think of Form D as triangulation. You are not picking your next employer from th
 
 There is one more thing the pipeline cannot do that is worth being explicit about. Sixty-two percent domain inference sounds like a high number until you think about what the thirty-eight percent represents. Each company in that remainder is a funded firm you cannot easily reach without further work. Some of them are the most interesting leads — small, obscure, operating without a marketing department. The fact that the pipeline couldn't find their website is not evidence that they're not worth pursuing. It is evidence that finding them requires a human judgment that no script can substitute for.
 
-![A single horizontal bar split into two segments: a larger left segment for the roughly sixty-two percent of companies whose domain was inferred automatically, and a smaller, emphasized right segment for the roughly thirty-eight percent that still require a human to locate the site.](images/06-where-the-money-went-sec-form-d-fig-04.png)
+![A single horizontal bar split into two segments: a larger left segment for the roughly sixty-two percent of companies whose domain was inferred automatically, and a smaller, emphasized right segment for the roughly thirty-eight percent that still require a human to locate the site.](../images/06-where-the-money-went-sec-form-d-fig-04.png)
 *Figure 6.4 — Domain inference: where the pipeline stops and you begin*
 
 This is not an accident of implementation. It is a structural property of the search problem. The companies that are hardest to find automatically are often the ones where showing up — actually tracking down the website, finding the right person, writing the email — yields the most asymmetric return. Everyone else gave up at the domain lookup step. You didn't.
@@ -291,17 +291,17 @@ Record the quarters processed, the audited row count, your filter thresholds (ge
 ## Prompts
 
 ### Figure 6.1 — The Form D corpus and the funded subset
-**Files:** images/06-where-the-money-went-sec-form-d-fig-01.svg · d3/06-where-the-money-went-sec-form-d-fig-01.html
+**Files:** ../images/06-where-the-money-went-sec-form-d-fig-01.svg · ../d3/06-where-the-money-went-sec-form-d-fig-01.html
 **Prompt:** Brutalist nested-proportion figure: one large neutral-fill rectangle for the full Form D population (~568,000 filers) fully enclosing a smaller red-stroked rectangle (~247,000 raising ≥$5M) sized at a little under half the outer area. One red, one canvas, hairline strokes; the proportion between the two regions must be honest.
 
 ### Figure 6.2 — The seven-step Form D pipeline across three layers
-**Files:** images/06-where-the-money-went-sec-form-d-fig-02.svg · d3/06-where-the-money-went-sec-form-d-fig-02.html
+**Files:** ../images/06-where-the-money-went-sec-form-d-fig-02.svg · ../d3/06-where-the-money-went-sec-form-d-fig-02.html
 **Prompt:** Brutalist layer-banded flowchart: three faint horizontal bands (raw / extracted / processed) with seven step nodes marching left to right and descending from raw into processed, single-direction arrows, a small audit-receipt marker beside each step. Ink and red only, mono labels, no decoration.
 
 ### Figure 6.3 — Recency × size beats raise amount
-**Files:** images/06-where-the-money-went-sec-form-d-fig-03.svg · d3/06-where-the-money-went-sec-form-d-fig-03.html
+**Files:** ../images/06-where-the-money-went-sec-form-d-fig-03.svg · ../d3/06-where-the-money-went-sec-form-d-fig-03.html
 **Prompt:** Brutalist 2×2 quadrant map: horizontal axis funding recency (stale → recent), vertical axis company size (large → small); emphasize the bottom-right small-and-recent quadrant in red as the target zone, render large-company quadrants as muted lower-value leads. Hairline axes, one accent color, sentence-case labels.
 
 ### Figure 6.4 — Domain inference: where the pipeline stops and you begin
-**Files:** images/06-where-the-money-went-sec-form-d-fig-04.svg · d3/06-where-the-money-went-sec-form-d-fig-04.html
+**Files:** ../images/06-where-the-money-went-sec-form-d-fig-04.svg · ../d3/06-where-the-money-went-sec-form-d-fig-04.html
 **Prompt:** Brutalist single-bar proportion split anchored at zero: a larger ~62% inferred segment in neutral ink and a smaller ~38% manual-lookup segment emphasized in ochre as the human-handoff line. Two segments only, no pie, no baked percentages as art.

@@ -5,7 +5,7 @@ Here is something that bothers me every time I see a job seeker's target list: t
 
 A Cambridge biotech with no consumer presence files fifteen Labor Condition Applications over three years and maintains an 85% H-1B approval rate. The household brand files essentially zero LCAs for roles like yours. For a candidate who needs sponsorship, the unknown biotech is a vastly better target — not by opinion, not by vibe, but by the public record. The whole problem is that prestige is loud and the visa record is quiet. This chapter makes the quiet record louder.
 
-![A grouped horizontal bar chart comparing a famous brand against an unknown biotech across LCA count, approval rate, funding recency, and composite score; the unknown biotech wins on the record even though the famous brand wins on name recognition.](images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-05.png)
+![A grouped horizontal bar chart comparing a famous brand against an unknown biotech across LCA count, approval rate, funding recency, and composite score; the unknown biotech wins on the record even though the famous brand wins on name recognition.](../images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-05.png)
 *Figure 7.1 — Famous brand versus unknown biotech: the ranking flip*
 
 <!-- → [CHART: horizontal bar chart showing a hypothetical pair of companies — "Famous Brand" vs. "Unknown Biotech" — with bars for LCA count, approval rate, funding recency, and composite score; the visual should make the ranking flip visceral and immediate] -->
@@ -22,7 +22,7 @@ The second is the **DOL LCA disclosure data** — every Labor Condition Applicat
 
 The third is the **USCIS H-1B Employer Data Hub** — actual approvals and denials by employer and year. This is not intent; it is outcome. An employer can file LCAs and still fail at the H-1B stage. The approval rate tells you how the filings resolve.
 
-![A convergent pipeline diagram: three public datasets — SEC Form D, DOL LCA data, and the USCIS H-1B Hub — feed a single sponsorship scorer node, with a fourth, lighter company-size input joining from below.](images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-01.png)
+![A convergent pipeline diagram: three public datasets — SEC Form D, DOL LCA data, and the USCIS H-1B Hub — feed a single sponsorship scorer node, with a fourth, lighter company-size input joining from below.](../images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-01.png)
 *Figure 7.2 — Three records into one score*
 
 <!-- → [DIAGRAM: three-node pipeline showing SEC Form D → DOL LCA Data → USCIS H-1B Hub flowing into a "Sponsorship Scorer" node, with arrows labeled "funding recency," "filing behavior," and "approval rate"; include a fourth node for "company-size signals" feeding in from below] -->
@@ -60,7 +60,7 @@ The composite probability then maps to a tier. **Proven** means strong, recent f
 
 I should flag something here. The system design document underlying the 80 Days pipeline describes three tiers — Proven, Likely, Unknown. The plain-language summary of the same system adds Avoid as a fourth. This chapter uses four tiers because "Avoid" does real work: it lets the engine actively deprioritize known non-sponsors rather than merely lacking data on them. The tier set and exact probability thresholds for each boundary need to be reconciled against the SDD before this goes to print. I am being transparent about that because the tier labels and thresholds are the output a reader will act on, and the distinction between a system that has three skills and one that has four is not cosmetic.
 
-![A horizontal spectrum running from Avoid through Unknown and Likely to Proven, with ascending evidence bands on the axis and a small action cue beneath each tier; Unknown is rendered distinct from Avoid.](images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-03.png)
+![A horizontal spectrum running from Avoid through Unknown and Likely to Proven, with ascending evidence bands on the axis and a small action cue beneath each tier; Unknown is rendered distinct from Avoid.](../images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-03.png)
 *Figure 7.3 — The four-tier sponsorship spectrum*
 
 <!-- → [INFOGRAPHIC: a horizontal spectrum from "Avoid" through "Unknown" through "Likely" to "Proven," with approximate probability ranges on the axis and brief action cues below each tier — what the engine does and what you do] -->
@@ -75,7 +75,7 @@ Running the weights: the LCA rate (×0.40) dominates because it is high and the 
 
 Now run the same logic on the household name. LCA rate: approximately zero for roles like yours. That ×0.40 term contributes nothing. No relevant H-1B approvals in your role category. The funding and size numbers are strong — they have the money, they have the infrastructure — but those terms together carry only 30% of the weight, and they cannot rescue a zero on the 70% that measures actual sponsorship behavior. The company lands in Avoid.
 
-![Two side-by-side stacked bars showing the weighted composite score for each company; the unknown biotech builds to a high total from all four weighted segments while the famous brand's filing-rate and approval-rate segments — together seventy percent — are empty, collapsing its bar into the Avoid range.](images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-02.png)
+![Two side-by-side stacked bars showing the weighted composite score for each company; the unknown biotech builds to a high total from all four weighted segments while the famous brand's filing-rate and approval-rate segments — together seventy percent — are empty, collapsing its bar into the Avoid range.](../images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-02.png)
 *Figure 7.4 — Weighted score: the ranking flip*
 
 <!-- → [CHART: two stacked bar charts side-by-side showing the weighted score breakdown for each company — each bar segment labeled with its component and weight, making visible how the "Avoid" company's 70% goes to zero while the Proven company builds from all four components] -->
@@ -128,7 +128,7 @@ The tier is what the public record supports. What the public record cannot suppo
 
 What the record can tell you, reliably, is: has this company demonstrated that it is willing and able to sponsor? That is the question the tier answers. Whether this company will sponsor you, in this role, right now — that is the question the tier informs but cannot answer.
 
-![A decision tree that resolves why a company landed in the Unknown tier and what to do: from an Unknown entry node, a join-coverage decision splits a likely name-match artifact (resolve the entity and re-run) from a true absence (seek direct sponsorship signals), making visible that Unknown is never read as Avoid.](images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-04.png)
+![A decision tree that resolves why a company landed in the Unknown tier and what to do: from an Unknown entry node, a join-coverage decision splits a likely name-match artifact (resolve the entity and re-run) from a true absence (seek direct sponsorship signals), making visible that Unknown is never read as Avoid.](../images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-04.png)
 *Figure 7.5 — Why a company is "Unknown": three causes, three responses*
 
 <!-- → [DIAGRAM: a decision tree beginning at "Tier assigned" — branching from Proven/Likely to "Target actively" and then to "Verify role type matches filing history," from Unknown to "Check coverage / resolve name match" and "Look for direct signals," and from Avoid to "Skip — reallocate application time (see Chapter 2)"] -->
@@ -321,21 +321,21 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 7.1 — Famous brand versus unknown biotech: the ranking flip
-**Files:** images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-05.svg · d3/07-who-sponsors-the-80-days-sponsorship-scorer-fig-05.html
+**Files:** ../images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-05.svg · ../d3/07-who-sponsors-the-80-days-sponsorship-scorer-fig-05.html
 **Prompt:** Brutalist grouped horizontal bar chart, zero baseline: two companies (famous brand, unknown biotech) compared across LCA count, approval rate, funding recency, and composite score. Unknown biotech bars in red as the winner on the record; famous brand bars in neutral ink. Hairline axis, mono tick labels, no decoration.
 
 ### Figure 7.2 — Three records into one score
-**Files:** images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-01.svg · d3/07-who-sponsors-the-80-days-sponsorship-scorer-fig-01.html
+**Files:** ../images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-01.svg · ../d3/07-who-sponsors-the-80-days-sponsorship-scorer-fig-01.html
 **Prompt:** Brutalist convergent-pipeline diagram: three equal source nodes (SEC Form D, DOL LCA, USCIS H-1B Hub) with single-direction arrows into one red scorer node, plus a visibly thinner company-size input joining from below. Ink and red only, hairline strokes, sentence-case labels, no database-cylinder shading.
 
 ### Figure 7.3 — The four-tier sponsorship spectrum
-**Files:** images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-03.svg · d3/07-who-sponsors-the-80-days-sponsorship-scorer-fig-03.html
+**Files:** ../images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-03.svg · ../d3/07-who-sponsors-the-80-days-sponsorship-scorer-fig-03.html
 **Prompt:** Brutalist horizontal evidence spectrum with four ordered zones (Avoid, Unknown, Likely, Proven) and one action-cue chip beneath each; render Unknown visibly distinct from Avoid. Red marks the Proven end, neutral grays the middle, ochre accent for the Unknown distinction. No gauge or speedometer imagery.
 
 ### Figure 7.4 — Weighted score: the ranking flip
-**Files:** images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-02.svg · d3/07-who-sponsors-the-80-days-sponsorship-scorer-fig-02.html
+**Files:** ../images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-02.svg · ../d3/07-who-sponsors-the-80-days-sponsorship-scorer-fig-02.html
 **Prompt:** Brutalist paired stacked bars, zero baseline: four weighted segments each (filing 0.40, approval 0.30, recency 0.20, size 0.10). The unknown-biotech bar fills all four to a high total; the famous-brand bar shows the two behavior segments (70%) hollow, collapsing it into the Avoid range. Red for the dominant filing segment, grays and ochre for the rest.
 
 ### Figure 7.5 — Why a company is "Unknown": three causes, three responses
-**Files:** images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-04.svg · d3/07-who-sponsors-the-80-days-sponsorship-scorer-fig-04.html
+**Files:** ../images/07-who-sponsors-the-80-days-sponsorship-scorer-fig-04.svg · ../d3/07-who-sponsors-the-80-days-sponsorship-scorer-fig-04.html
 **Prompt:** Brutalist top-down disambiguation tree from a single Unknown entry node: one join-coverage decision splits a name-match-artifact path (resolve entity, re-run) from a true-absence path (seek direct signals). Single-direction arrows, one accent color for the active action nodes, hairline decision diamond. The visual thesis: Unknown is never Avoid.

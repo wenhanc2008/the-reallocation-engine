@@ -20,7 +20,7 @@ The problem is that these two needs are in tension. The imperative recipe is str
 
 So you write it twice.
 
-![Two boxes side by side — an AI-artifact box of terse, imperative attributes and a human-artifact box of fuller comprehension attributes — both resting on a single wide foundation bar labeled the verified-data contract, with arrows rising from the foundation into each box.](images/04-two-customers-fig-01.png)
+![Two boxes side by side — an AI-artifact box of terse, imperative attributes and a human-artifact box of fuller comprehension attributes — both resting on a single wide foundation bar labeled the verified-data contract, with arrows rising from the foundation into each box.](../images/04-two-customers-fig-01.png)
 *Figure 4.1 — Two customers, one contract*
 
 <!-- → [DIAGRAM: Two boxes side by side, labeled "AI Artifact (recipe)" and "Human Artifact (card)". AI box lists: terse, imperative, read-first order, commands verbatim, stop conditions. Human box lists: purpose statement, dependencies, how-to-run, what-it-produces, failure modes. Both boxes share a footer labeled "Verified-Data Contract (_shared.md)" with arrows pointing into both. Caption: "Same recipe, two documents. The contract is the one thing both artifacts must honor."] -->
@@ -55,7 +55,7 @@ Six weeks later, you read the human doc to understand why the scan recipe works 
 
 Drift is its own failure mode — not a consequence of forgetting to maintain the docs, but a structural property of having two artifacts with no enforcement binding them. The only enforcement is discipline: when you update one, you update both in the same commit, and the human doc's failure-modes section explicitly lists "human doc not updated when recipe changes" as one of the named failure modes. The system cannot automate this. The discipline is yours.
 
-![Two parallel tracks — recipe and card — across three time positions: initially in sync, then the recipe is updated while the card stays unchanged and the connector between them breaks, then a reader follows the stale card down a wrong path diverging from the recipe's actual behavior.](images/04-two-customers-fig-03.png)
+![Two parallel tracks — recipe and card — across three time positions: initially in sync, then the recipe is updated while the card stays unchanged and the connector between them breaks, then a reader follows the stale card down a wrong path diverging from the recipe's actual behavior.](../images/04-two-customers-fig-03.png)
 *Figure 4.3 — Drift: when the map leaves the territory*
 
 ## Both artifacts honor the verified-data contract
@@ -170,7 +170,7 @@ npm run ats:verify
 
 The commands are identical between the two artifacts. What differs is the frame: the recipe assumes the reader will execute immediately; the human card assumes the reader is trying to understand. The same content, arranged for two different questions — "what do I run?" versus "what is this and how does it break?"
 
-![A section-by-section matrix mapping the five recipe sections across the two artifacts — opening, core content, evidence, logging, failure — where the AI column carries terse imperative chips and the human column fuller annotated chips, and the failure row shows an empty AI cell against the heaviest chip in the human column.](images/04-two-customers-fig-02.png)
+![A section-by-section matrix mapping the five recipe sections across the two artifacts — opening, core content, evidence, logging, failure — where the AI column carries terse imperative chips and the human column fuller annotated chips, and the failure row shows an empty AI cell against the heaviest chip in the human column.](../images/04-two-customers-fig-02.png)
 *Figure 4.2 — Same content, inverted context: section-by-section*
 
 <!-- → [INFOGRAPHIC: Two annotated documents side by side — left labeled "AI Recipe (scan.md)" with callout arrows pointing to: read-first list, verbatim commands, stop condition, log template; right labeled "Human Card (scan — maintainer view)" with callout arrows pointing to: purpose statement, dependency list, annotated commands, failure modes numbered 1–4. Caption: "The recipe is optimized for execution. The card is optimized for comprehension. Neither does the other's job."] -->
@@ -377,13 +377,13 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 4.1 — Two customers, one contract
-**Files:** images/04-two-customers-fig-01.svg · d3/04-two-customers-fig-01.html
+**Files:** ../images/04-two-customers-fig-01.svg · ../d3/04-two-customers-fig-01.html
 **Prompt:** Two boxes side by side on white — a terse AI artifact and a fuller human artifact — both resting on one wide foundation bar for the verified-data contract, arrows rising from the foundation into each. Keep the two boxes in neutral grays and mark the shared contract foundation in the one red accent so divergence-above-convergence-below reads at a glance.
 
 ### Figure 4.2 — Same content, inverted context: section-by-section
-**Files:** images/04-two-customers-fig-02.svg · d3/04-two-customers-fig-02.html
+**Files:** ../images/04-two-customers-fig-02.svg · ../d3/04-two-customers-fig-02.html
 **Prompt:** A section-by-section matrix on white with a section-label column and two artifact columns across five rows, each cell a weighted chip. Hold the columns in neutral grays and make only the failure row asymmetric — an empty AI cell against the heaviest human chip rendered in the one red accent.
 
 ### Figure 4.3 — Drift: when the map leaves the territory
-**Files:** images/04-two-customers-fig-03.svg · d3/04-two-customers-fig-03.html
+**Files:** ../images/04-two-customers-fig-03.svg · ../d3/04-two-customers-fig-03.html
 **Prompt:** Two parallel tracks on white across three time positions — recipe and card in sync, then the recipe edits while the connector breaks, then a reader follows the stale card down a wrong path. Render both tracks in neutral grays and reserve the one red accent for the broken connector and the diverging wrong-path branch.

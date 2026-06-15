@@ -54,3 +54,5 @@ data/BLS/db_30_2_mysql/
 /data/sec/form-d/processed/companies-sec-2025q4-d.json
 /data/sec/form-d/processed/companies-sec-2026q1-d.json
 # <<< end large files
+/anki/
+/wayback/

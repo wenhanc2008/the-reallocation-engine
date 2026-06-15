@@ -35,7 +35,7 @@ Liveness and timeline are different in kind. They are *gates*. A ghost posting �
 
 This is the math expressing a truth about the job search, not imposing a rule on top of it. A perfect role at a sponsoring company is worth nothing if the posting is fiction or you cannot start in time. The multiplicative structure is the honest description of that reality.
 
-![Systems diagram of the composite: two weighted votes — a dominant sponsorship input and a lighter fit input — merge at a summing junction, then pass through two inline gates (liveness, then timeline) that can collapse the flow toward zero, before reaching a threshold node that branches into Apply, Consider, or Skip.](images/11-the-bayesian-role-scorer-fig-01.png)
+![Systems diagram of the composite: two weighted votes — a dominant sponsorship input and a lighter fit input — merge at a summing junction, then pass through two inline gates (liveness, then timeline) that can collapse the flow toward zero, before reaching a threshold node that branches into Apply, Consider, or Skip.](../images/11-the-bayesian-role-scorer-fig-01.png)
 *Figure 11.1 — The composite: votes, gates, and threshold*
 
 ## The worked case — one posting, all four factors traced
@@ -56,7 +56,7 @@ Now the contrast. The same graduate. The same fit of 0.7. The same liveness and 
 
 The candidate did not get worse. The company did not get less impressive. The binding constraint changed, and the weighting surfaced it. That is the scorer's job.
 
-![Two parallel four-segment stacks for the same candidate. In the left stack (a sponsoring company) the sponsorship segment is large; in the right stack (a non-sponsor) it is nearly absent while fit, liveness, and timeline are identical. The composite bars below sit on a shared zero baseline: the left clears the threshold line and resolves to Apply, the right falls below and resolves to Skip.](images/11-the-bayesian-role-scorer-fig-02.png)
+![Two parallel four-segment stacks for the same candidate. In the left stack (a sponsoring company) the sponsorship segment is large; in the right stack (a non-sponsor) it is nearly absent while fit, liveness, and timeline are identical. The composite bars below sit on a shared zero baseline: the left clears the threshold line and resolves to Apply, the right falls below and resolves to Skip.](../images/11-the-bayesian-role-scorer-fig-02.png)
 *Figure 11.2 — Same candidate, same fit: sponsorship decides*
 
 | Factor | Cambridge biotech (Proven) | Household-name non-sponsor |
@@ -80,7 +80,7 @@ The candidate did not get worse. The company did not get less impressive. The bi
 
 And then there is **Override** — the recommendation the system will not give you, but that you can give yourself. If you hold private information the data cannot — the hiring manager is a contact who told you directly they're actively interviewing, or the company just quietly started sponsoring last month and the LCA record hasn't caught up — you can override the scorer. But the discipline is this: write down what you knew that the scorer didn't. An override with a documented reason is a legitimate correction. An override without one is just ignoring the math because you like the company.
 
-![Two-axis decision map: sponsorship probability on the horizontal axis, fit score on the vertical. The high-sponsorship, high-fit corner is Apply; the two mixed corners are Consider; the low-sponsorship, low-fit corner is Skip. Two points at identical fit but different sponsorship land in the Apply and Skip regions respectively.](images/11-the-bayesian-role-scorer-fig-03.png)
+![Two-axis decision map: sponsorship probability on the horizontal axis, fit score on the vertical. The high-sponsorship, high-fit corner is Apply; the two mixed corners are Consider; the low-sponsorship, low-fit corner is Skip. Two points at identical fit but different sponsorship land in the Apply and Skip regions respectively.](../images/11-the-bayesian-role-scorer-fig-03.png)
 *Figure 11.3 — Apply / Consider / Skip decision regions*
 
 <!-- → [INFOGRAPHIC: Four-quadrant grid. X-axis: sponsorship probability (low → high). Y-axis: fit score (low → high). Regions labeled: top-right = Apply, top-left and bottom-right = Consider, bottom-left = Skip. Overlay: two data points for the worked example (Cambridge biotech = Apply zone, non-sponsor = Skip zone despite identical Y position). Caption: "The Apply/Consider/Skip regions show why fit alone doesn't determine the recommendation — the sponsorship axis moves you horizontally, not vertically."] -->
@@ -93,7 +93,7 @@ Notice what separates that system from this one. The Eightfold scorer learned fr
 
 A composite score is a powerful tool and a dangerous one. The safety is not the math. It is the auditability. If you ever cannot explain why a role scored what it did — tracing each term to its source — distrust the recommendation before you distrust your confusion.
 
-![Two-column comparison. The left column (this scorer) shows stated weights as labeled contributors, each traced by a line back to a named source and terminating in a recommendation whose every term can be followed. The right column (an opaque scorer) shows weights sealed inside a box trained on a stack of past decisions, with no traceable lines from the recommendation back to any source.](images/11-the-bayesian-role-scorer-fig-04.png)
+![Two-column comparison. The left column (this scorer) shows stated weights as labeled contributors, each traced by a line back to a named source and terminating in a recommendation whose every term can be followed. The right column (an opaque scorer) shows weights sealed inside a box trained on a stack of past decisions, with no traceable lines from the recommendation back to any source.](../images/11-the-bayesian-role-scorer-fig-04.png)
 *Figure 11.4 — Auditable vs. opaque scorer*
 
 | Property | This scorer | Eightfold-style scorer |
@@ -302,17 +302,17 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 11.1 — The composite: votes, gates, and threshold
-**Files:** images/11-the-bayesian-role-scorer-fig-01.svg
+**Files:** ../images/11-the-bayesian-role-scorer-fig-01.svg
 **Prompt:** Brutalist systems diagram on a white canvas: two weighted votes (a heavy sponsorship connector and a lighter fit connector in ink) merging at a summing junction, then passing through two inline gate valves — liveness and timeline — that can collapse the flow to zero, ending at a red threshold node that branches into Apply, Consider, Skip. One red accent, ink structure, JetBrains Mono labels, single-headed arrows, no shadows or gradients.
 
 ### Figure 11.2 — Same candidate, same fit: sponsorship decides
-**Files:** images/11-the-bayesian-role-scorer-fig-02.svg
+**Files:** ../images/11-the-bayesian-role-scorer-fig-02.svg
 **Prompt:** Brutalist comparison panel: two parallel four-segment stacks (sponsorship, fit, liveness, timeline) for one identical candidate, the sponsorship segment dominant on the left and near-absent on the right while the fit segment is visibly identical. Two composite bars below on a shared zero baseline cross one horizontal threshold line — left clears to Apply (red), right falls to Skip (ink). White canvas, EB Garamond labels, no decoration.
 
 ### Figure 11.3 — Apply / Consider / Skip decision regions
-**Files:** images/11-the-bayesian-role-scorer-fig-03.svg · d3/11-the-bayesian-role-scorer-fig-03.html
+**Files:** ../images/11-the-bayesian-role-scorer-fig-03.svg · ../d3/11-the-bayesian-role-scorer-fig-03.html
 **Prompt:** Brutalist two-axis decision map: sponsorship probability (x) against fit score (y), the plane partitioned into Apply (top-right, red), Consider (mixed corners), and Skip (bottom-left, fill gray). Plot two points at identical fit but different sponsorship landing in Apply and Skip, joined by an ochre equal-fit guide line. One red accent, ink axes, JetBrains Mono ticks, white canvas.
 
 ### Figure 11.4 — Auditable vs. opaque scorer
-**Files:** images/11-the-bayesian-role-scorer-fig-04.svg
+**Files:** ../images/11-the-bayesian-role-scorer-fig-04.svg
 **Prompt:** Brutalist two-column contrast on white: the left column traces each stated weight by a line back to a named source and on to a recommendation; the right column seals the weights inside a shaded box trained on a stack of past decisions, with no provenance lines out. Red for the traceable side, muted ink for the opaque interior, single-headed arrows, no shadows or gradients.

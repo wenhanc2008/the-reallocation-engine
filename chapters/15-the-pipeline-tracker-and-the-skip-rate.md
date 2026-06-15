@@ -20,7 +20,7 @@ So the tracker reads in two directions. Skip rate well under fifty percent means
 
 The skip is not an absence in the log. It is a decision, and a tracker that logs only applications is missing half the data about how well the filter works.
 
-![A horizontal dial for the skip rate marked with the decision bands: below 40% is too loose (filter too permissive); 40–50% is borderline; above 50% with steady applies is healthy; above roughly 85% is starved (funnel too tight). A pointer sits in the healthy band, with the 50% target marked as the line the filter must clear.](images/15-the-pipeline-tracker-and-the-skip-rate-fig-01.png)
+![A horizontal dial for the skip rate marked with the decision bands: below 40% is too loose (filter too permissive); 40–50% is borderline; above 50% with steady applies is healthy; above roughly 85% is starved (funnel too tight). A pointer sits in the healthy band, with the 50% target marked as the line the filter must clear.](../images/15-the-pipeline-tracker-and-the-skip-rate-fig-01.png)
 *Figure 15.1 — Reading the skip-rate dial*
 
 ---
@@ -46,7 +46,7 @@ Consider a week of actual tracker data: thirty roles evaluated, seventeen skippe
 
 The right response to that picture: keep the thresholds, because the skip rate is healthy, but reclaim an hour from applying back to networking next week. That is the 3-3-2 decision rule operating on real data rather than on principle.
 
-![A week of thirty evaluated roles broken into seventeen skips and thirteen applies on a single zero-based bar, with skips drawn as a full segment rather than an empty space. The 57% skip rate sits above the 50% target line, showing the filter doing real work — the skips are counted as data, not absence.](images/15-the-pipeline-tracker-and-the-skip-rate-fig-02.png)
+![A week of thirty evaluated roles broken into seventeen skips and thirteen applies on a single zero-based bar, with skips drawn as a full segment rather than an empty space. The 57% skip rate sits above the 50% target line, showing the filter doing real work — the skips are counted as data, not absence.](../images/15-the-pipeline-tracker-and-the-skip-rate-fig-02.png)
 *Figure 15.2 — A week of decisions: skips are data*
 
 The limit is equally worth stating. Early in the search, per-tier response samples are tiny and noisy — a three-application "trend" is not a trend. And the skip rate is a process metric, not an outcome metric. A healthy skip rate with zero responses still means something is wrong; it just means something upstream is wrong — bad targeting, weak materials — not that the filter itself has failed. The tracker measures discipline and targeting quality. It cannot conjure offers, and it cannot tell the difference between a targeting failure and a sector-wide hiring freeze. The numbers look identical. You read them in the context of a market the tracker can't see.
@@ -59,7 +59,7 @@ Below forty percent is too loose. Trust the scorer's skips; stop overriding to a
 
 The allocation summary closes the other loop. It shows how your hours actually split across apply, network, and portfolio — so the tracker doesn't just measure targeting quality, it catches allocation drift before a week has gone sideways. The skip rate tells you the filter is working. The allocation summary tells you that you are. You need both readings to know that the search is actually running the way Chapter 2 designed it.
 
-![Two side-by-side readings. The left panel is the skip rate read against its target — is the filter working? The right panel is the allocation split across apply, network, and portfolio read against 3-3-2 — are you working as designed? The skip rate measures targeting quality; the allocation summary measures discipline, and both are needed.](images/15-the-pipeline-tracker-and-the-skip-rate-fig-03.png)
+![Two side-by-side readings. The left panel is the skip rate read against its target — is the filter working? The right panel is the allocation split across apply, network, and portfolio read against 3-3-2 — are you working as designed? The skip rate measures targeting quality; the allocation summary measures discipline, and both are needed.](../images/15-the-pipeline-tracker-and-the-skip-rate-fig-03.png)
 *Figure 15.3 — Two readings: skip rate and allocation*
 
 ## Chapter 15 Exercises: The Pipeline Tracker and the Skip Rate
@@ -250,13 +250,13 @@ Record the week's skip rate, the per-tier response rates with sample sizes, the 
 ## Prompts
 
 ### Figure 15.1 — Reading the skip-rate dial
-**Files:** images/15-the-pipeline-tracker-and-the-skip-rate-fig-01.svg
+**Files:** ../images/15-the-pipeline-tracker-and-the-skip-rate-fig-01.svg
 **Prompt:** Brutalist horizontal dial on white marked with decision bands — below 40% too loose, 40–50% borderline, above 50% healthy, above 85% starved — with a pointer in the healthy band and the 50% target marked in red. Gray bands, one red accent, JetBrains Mono percentage ticks, no gradients or shadows.
 
 ### Figure 15.2 — A week of decisions: skips are data
-**Files:** images/15-the-pipeline-tracker-and-the-skip-rate-fig-02.svg
+**Files:** ../images/15-the-pipeline-tracker-and-the-skip-rate-fig-02.svg
 **Prompt:** Brutalist single stacked bar on a zero baseline: thirty evaluated roles split into seventeen skips and thirteen applies, the skip segment drawn as a solid block, not empty space, with the 57% skip rate above a red 50% target line. Ink and gray segments, one red accent, JetBrains Mono labels, no decoration.
 
 ### Figure 15.3 — Two readings: skip rate and allocation
-**Files:** images/15-the-pipeline-tracker-and-the-skip-rate-fig-03.svg
+**Files:** ../images/15-the-pipeline-tracker-and-the-skip-rate-fig-03.svg
 **Prompt:** Brutalist two-panel comparison on white: left panel the skip rate against its target ("is the filter working?"), right panel the apply/network/portfolio hours against 3-3-2 ("are you working as designed?"). One red accent per panel, ink axes, JetBrains Mono ticks, no gradients or shadows.

@@ -5,7 +5,7 @@ Here is a number that should bother you. Somewhere between 28 and 42 percent of 
 
 I want to sit with that before we get to the detection problem, because the number is stranger than it looks. A ghost job isn't a posting that went live and then the position was cancelled. It's a posting that was never, at the moment of posting, connected to an intention to hire someone. It can be a pipeline hedge — the company isn't hiring now but wants résumés queued when it does. It can be a signal to investors that the firm is growing. It can be bureaucratic inertia: a listing that went up two quarters ago and no one has gotten around to taking down. Whatever the cause, the effect for a candidate on a finite clock is the same. A day spent writing a cover letter, tailoring a résumé, researching the company, submitting an application — to a door that was never going to open.
 
-![A quantitative chart with a time axis from 2019 to 2024 and a prevalence axis from zero to fifty percent; a shaded band at twenty-eight to forty-two percent holds steady across the years while individual study points scatter in and near it, with a couple of lower outliers.](images/08-is-the-job-real-ats-detection-and-liveness-fig-01.png)
+![A quantitative chart with a time axis from 2019 to 2024 and a prevalence axis from zero to fifty percent; a shaded band at twenty-eight to forty-two percent holds steady across the years while individual study points scatter in and near it, with a couple of lower outliers.](../images/08-is-the-job-real-ats-detection-and-liveness-fig-01.png)
 *Figure 8.1 — Ghost-job prevalence holds across years*
 
 <!-- → [CHART: Bar chart showing ghost-job prevalence estimates across multiple studies and years (2019–2024), y-axis 0–50%, with a shaded band at 28–42% and individual city/source data points labeled (e.g., LA 30.5%, Seattle 16.6%). Caption: "Ghost-job prevalence has held in the 28–42% range across five years — not a cycle artifact but a structural feature of the posting market."] -->
@@ -24,7 +24,7 @@ python scripts/ats/detect-ats.py --company "Example Bio"
 
 It returns a label — Greenhouse, Lever, Ashby, or unknown. That label is not interesting on its own. What it unlocks is the ability to read the feed correctly. A scraper built for Greenhouse reads Lever data as noise. Detection is the key; without it, everything downstream is garbled.
 
-![Three applicant-tracking platforms — Greenhouse, Lever, and Ashby — each with its own feed structure, all resolving to one unified postings-record schema with fields for job id, title, posted date, last updated, description, and status.](images/08-is-the-job-real-ats-detection-and-liveness-fig-05.png)
+![Three applicant-tracking platforms — Greenhouse, Lever, and Ashby — each with its own feed structure, all resolving to one unified postings-record schema with fields for job id, title, posted date, last updated, description, and status.](../images/08-is-the-job-real-ats-detection-and-liveness-fig-05.png)
 *Figure 8.2 — Detection unlocks the schema*
 
 <!-- → [DIAGRAM: Three ATS platforms (Greenhouse, Lever, Ashby) each shown as a box with their characteristic URL/feed structure beneath, all pointing to a unified "postings record" schema with fields: job_id, title, posted_date, last_updated, description, status. Caption: "Each ATS structures its data differently; detection tells the scraper which schema to read."] -->
@@ -47,7 +47,7 @@ Ghost postings have the same fingerprints. A posting that has been up eleven wee
 
 No single signal is decisive. A genuinely open role can sit untouched for weeks at a slow-moving organization. A ghost can be freshly posted specifically to look active. But together, the way no individual word makes an email spam but the pattern does, they yield a classification you can defend. That is the standard I care about: not certainty, but a call traceable to the specific signals that produced it.
 
-![A three-column map drawing the parallel between spam detection and ghost-job detection across three behavioral fingerprints — temporal anomalies, interaction voids, and textual homogeneity — each column pairing an email-spam example with a job-posting example.](images/08-is-the-job-real-ats-detection-and-liveness-fig-02.png)
+![A three-column map drawing the parallel between spam detection and ghost-job detection across three behavioral fingerprints — temporal anomalies, interaction voids, and textual homogeneity — each column pairing an email-spam example with a job-posting example.](../images/08-is-the-job-real-ats-detection-and-liveness-fig-02.png)
 *Figure 8.3 — The spam-filter analogy: three behavioral fingerprints*
 
 <!-- → [INFOGRAPHIC: Three-column layout labeled "Temporal Anomalies," "Interaction Voids," "Textual Homogeneity." Under each: two or three bullet examples from job-posting context (e.g., "unchanged for 8+ weeks," "no portal activity," "description reused across 3 listings"). Footer: "Ghost detection scores behavioral patterns — the same move your spam filter makes."] -->
@@ -72,7 +72,7 @@ The classification runs after all five:
 npm run ats:liveness
 ```
 
-![A classifier diagram where five posting signals — posting age, last-updated date, sibling-listing activity, description specificity, and active-search context — feed a single liveness decision that fans out to three terminal calls: live, ghost, and investigate.](images/08-is-the-job-real-ats-detection-and-liveness-fig-03.png)
+![A classifier diagram where five posting signals — posting age, last-updated date, sibling-listing activity, description specificity, and active-search context — feed a single liveness decision that fans out to three terminal calls: live, ghost, and investigate.](../images/08-is-the-job-real-ats-detection-and-liveness-fig-03.png)
 *Figure 8.4 — Five signals to one classification*
 
 The output is one of three calls per posting: live, ghost, or investigate. The first two are self-explanatory. The third is the honest response to mixed signals — recent posting but templated description; stale posting at a company that just raised money. Investigate means: one cheap check resolves this faster than a blind application or a blind skip.
@@ -85,7 +85,7 @@ Posting A went up nine days ago. The description references a specific named pro
 
 Posting B has been up eleven weeks. The description is word-for-word identical to a data scientist posting the company ran eighteen months ago and to two other currently active listings under slightly different titles. No portal activity is detectable. The count for this listing has not changed across three scans. Five signals, all pointing the same direction. `ats:liveness` flags it stale — likely ghost.
 
-![A side-by-side comparison of two postings from the same employer scored across five liveness signals; Posting A reads live on every signal and Posting B reads ghost on every signal, even though both share the same title and sponsorship tier.](images/08-is-the-job-real-ats-detection-and-liveness-fig-04.png)
+![A side-by-side comparison of two postings from the same employer scored across five liveness signals; Posting A reads live on every signal and Posting B reads ghost on every signal, even though both share the same title and sponsorship tier.](../images/08-is-the-job-real-ats-detection-and-liveness-fig-04.png)
 *Figure 8.5 — Same employer, two doors*
 
 The same employer. The same title. The same sponsorship tier. One of these is a door; one is a picture of a door. The decision is not about the company — the company is real. The decision is about the posting.
@@ -324,21 +324,21 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 8.1 — Ghost-job prevalence holds across years
-**Files:** images/08-is-the-job-real-ats-detection-and-liveness-fig-01.svg · d3/08-is-the-job-real-ats-detection-and-liveness-fig-01.html
+**Files:** ../images/08-is-the-job-real-ats-detection-and-liveness-fig-01.svg · ../d3/08-is-the-job-real-ats-detection-and-liveness-fig-01.html
 **Prompt:** Brutalist scatter-with-band, zero-baseline prevalence axis (0–50%) over years 2019–2024: a neutral shaded band at 28–42% holding flat across the width, study points scattered in and near it, two lower outliers distinguished. No fitted trend line, mono tick labels, one accent color for the points.
 
 ### Figure 8.2 — Detection unlocks the schema
-**Files:** images/08-is-the-job-real-ats-detection-and-liveness-fig-05.svg · d3/08-is-the-job-real-ats-detection-and-liveness-fig-05.html
+**Files:** ../images/08-is-the-job-real-ats-detection-and-liveness-fig-05.svg · ../d3/08-is-the-job-real-ats-detection-and-liveness-fig-05.html
 **Prompt:** Brutalist convergence diagram: three platform nodes (Greenhouse, Lever, Ashby), each with a distinct feed structure, resolving via single-direction arrows into one unified postings-record schema box listing job id, title, posted date, last updated, description, status. Ink and red only, hairline strokes, no UI chrome.
 
 ### Figure 8.3 — The spam-filter analogy: three behavioral fingerprints
-**Files:** images/08-is-the-job-real-ats-detection-and-liveness-fig-02.svg · d3/08-is-the-job-real-ats-detection-and-liveness-fig-02.html
+**Files:** ../images/08-is-the-job-real-ats-detection-and-liveness-fig-02.svg · ../d3/08-is-the-job-real-ats-detection-and-liveness-fig-02.html
 **Prompt:** Brutalist three-column parallel map: columns for temporal anomalies, interaction voids, textual homogeneity; each column stacks an email-spam chip over a job-posting chip, rows aligned across all three columns. The thesis — score behavior, not content. Neutral grays with one accent, no envelope or inbox icons.
 
 ### Figure 8.4 — Five signals to one classification
-**Files:** images/08-is-the-job-real-ats-detection-and-liveness-fig-03.svg · d3/08-is-the-job-real-ats-detection-and-liveness-fig-03.html
+**Files:** ../images/08-is-the-job-real-ats-detection-and-liveness-fig-03.svg · ../d3/08-is-the-job-real-ats-detection-and-liveness-fig-03.html
 **Prompt:** Brutalist many-to-one-to-three funnel: five input nodes (posting age, last-updated, sibling activity emphasized, description specificity, active-search context) feed one classifier node that fans out to three calls — live, ghost, investigate. Red for the classifier, ochre for the investigate branch, grays for the rest; single-direction arrows.
 
 ### Figure 8.5 — Same employer, two doors
-**Files:** images/08-is-the-job-real-ats-detection-and-liveness-fig-04.svg · d3/08-is-the-job-real-ats-detection-and-liveness-fig-04.html
+**Files:** ../images/08-is-the-job-real-ats-detection-and-liveness-fig-04.svg · ../d3/08-is-the-job-real-ats-detection-and-liveness-fig-04.html
 **Prompt:** Brutalist two-column signal grid: Posting A and Posting B share five signal rows plus a classification row; A reads live on every signal, B reads ghost on every signal. Use ink for live chips and ochre for ghost chips — explicitly avoid red-green coding. Hairline dividers, mono row labels.

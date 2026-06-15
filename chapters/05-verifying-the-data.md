@@ -10,7 +10,7 @@ The distinction is not subtle. You can have a perfectly audited, perfectly scrip
 
 The methods in this chapter come from a companion book, *Computational Skepticism for AI*, where they are developed in full technical depth. I'm drawing on them here because they apply directly to the DOL and USCIS datasets this book runs on. If the reasoning feels compact in places, that's intentional — this is the practitioner application, not the derivation. What matters here is the procedure and what it surfaces.
 
-![A three-tier vertical stack: a wide foundation tier for the Chapter 3 guarantee that numbers trace to real records, a middle working tier asking whether the right things are being measured, and a narrower top tier for trustworthy inference, with a left-side ascent arrow marking the gap between the bottom two tiers as where coverage gaps, name-matching failures, and base-rate mismatch live.](images/05-verifying-the-data-fig-01.png)
+![A three-tier vertical stack: a wide foundation tier for the Chapter 3 guarantee that numbers trace to real records, a middle working tier asking whether the right things are being measured, and a narrower top tier for trustworthy inference, with a left-side ascent arrow marking the gap between the bottom two tiers as where coverage gaps, name-matching failures, and base-rate mismatch live.](../images/05-verifying-the-data-fig-01.png)
 *Figure 5.1 — The three-tier trust stack*
 
 <!-- → [INFOGRAPHIC: Three-tier stack. Bottom tier labeled "Chapter 3 guarantee: numbers trace to real records." Middle tier (this chapter) labeled "Chapter 5 asks: are the right things being measured?" Top tier labeled "Trustworthy inference." An arrow on the left side labels the gap between tiers 1 and 2: "Coverage gaps, name-matching failures, base-rate mismatch." Caption: "The floor the contract provides. This chapter builds the next tier."] -->
@@ -27,7 +27,7 @@ Here is the practical consequence for this book: an employer who sponsored consi
 
 This is the "why exactly N rows?" move applied to the join problem. The boundary of the dataset is not just the schema — it is the schema plus every reference the schema's contents imply. The LCA dataset references employer names. Employer names reference legal entities. Legal entities undergo mergers, renamings, and restructurings. The full count lives somewhere in that chain. The dataset gives you a sample of it, bounded by however the names happened to be entered in the filing system.
 
-![Three small employer-name buckets — variants of one firm, each with a modest filing count — enclosed by a dotted boundary labeled the same legal filer, with a single arrow pointing right to one larger consolidated node representing the true aggregated count.](images/05-verifying-the-data-fig-02.png)
+![Three small employer-name buckets — variants of one firm, each with a modest filing count — enclosed by a dotted boundary labeled the same legal filer, with a single arrow pointing right to one larger consolidated node representing the true aggregated count.](../images/05-verifying-the-data-fig-02.png)
 *Figure 5.2 — Name-matching fragmentation*
 
 <!-- → [DIAGRAM: One company (Alphabet / Google LLC / Google Inc.) shown as three separate employer-name buckets in the LCA filing data, each with a small filing count. A dotted box around all three labeled "Same legal filer." An arrow pointing to the aggregated true count. Caption: "Name-matching failures don't break the dataset. They fragment it. The rows are real; the employer grouping is not."] -->
@@ -36,7 +36,7 @@ This is the "why exactly N rows?" move applied to the join problem. The boundary
 
 The six-step procedure in *Computational Skepticism for AI* is designed for any dataset you intend to base a deployment on. I'll walk through it applied to the sponsorship dataset — the LCA-to-H-1B join that the Sponsorship Scorer in Chapter 7 will run.
 
-![A six-step linear flowchart — read metadata and lock a prediction, run exploratory analysis, test metadata against the data, ask what is not in the data, trace one row end to end, write the epistemic frame and compare to the prediction — with a dashed reference arc closing from the final compare step back to the locked prediction.](images/05-verifying-the-data-fig-03.png)
+![A six-step linear flowchart — read metadata and lock a prediction, run exploratory analysis, test metadata against the data, ask what is not in the data, trace one row end to end, write the epistemic frame and compare to the prediction — with a dashed reference arc closing from the final compare step back to the locked prediction.](../images/05-verifying-the-data-fig-03.png)
 *Figure 5.3 — The six-step interrogation procedure*
 
 **Step 1 — Read the metadata and lock your prediction.** Before running any analysis, read the DOL disclosure file documentation. It tells you what fields are present, what time window is covered, and what constitutes a valid LCA. Write down what you expect the data to look like: how many rows, which employers should be there, what the approval rate distribution should look like. Lock this prediction before you look.
@@ -144,7 +144,7 @@ This does not change the conclusion dramatically — the employer is still a gen
 
 Now the base rate check. In this SIC code (pharmaceutical and medicine manufacturing), the three-year LCA filing rate among employers in the DOL's universe is approximately 8%. The scorer returned 0.68. Working through the Bayes update: prior 0.08, likelihood ratio based on the observed filing count, posterior approximately 0.38–0.45 depending on assumptions. The 0.68 overstates the posterior probability by somewhere between 50% and 75%.
 
-![A horizontal probability axis from zero to one with three markers — a low base-rate prior near 0.08 at the far left, the raw scorer output at 0.68 toward the right, and the corrected posterior landing between them in the high-thirties to mid-forties — with a correction arrow sweeping from the raw output leftward to the posterior and a faint anchor line from the prior showing the downward pull.](images/05-verifying-the-data-fig-04.png)
+![A horizontal probability axis from zero to one with three markers — a low base-rate prior near 0.08 at the far left, the raw scorer output at 0.68 toward the right, and the corrected posterior landing between them in the high-thirties to mid-forties — with a correction arrow sweeping from the raw output leftward to the posterior and a faint anchor line from the prior showing the downward pull.](../images/05-verifying-the-data-fig-04.png)
 *Figure 5.4 — Base rate pulls the posterior down*
 
 What does this mean for an F-1 student considering this company? It means the verified-data finding is: "We observe twelve LCA filings in three years and an 80% historical approval rate." It does not mean "this company sponsors." It means this company has a demonstrated filing history that makes them a reasonable target for further investigation — specifically, a direct inquiry about current H-1B sponsorship posture for the specific role and visa type relevant to you.
@@ -366,18 +366,18 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 5.1 — The three-tier trust stack
-**Files:** images/05-verifying-the-data-fig-01.svg · d3/05-verifying-the-data-fig-01.html
+**Files:** ../images/05-verifying-the-data-fig-01.svg · ../d3/05-verifying-the-data-fig-01.html
 **Prompt:** A three-tier vertical stack on white, widest and most solid at the base, narrowing toward a provisional top tier. Render the tiers in neutral grays with the middle working tier marked in the one red accent, and put a left-side ascent arrow with an ochre gap callout naming where coverage gaps and base-rate mismatch live.
 
 ### Figure 5.2 — Name-matching fragmentation
-**Files:** images/05-verifying-the-data-fig-02.svg · d3/05-verifying-the-data-fig-02.html
+**Files:** ../images/05-verifying-the-data-fig-02.svg · ../d3/05-verifying-the-data-fig-02.html
 **Prompt:** Three small employer-name buckets on white inside a dotted ink boundary marking them one legal filer, with a single arrow to a larger consolidated true-count node on the right. Keep the fragment buckets in neutral gray and render the consolidated true count in the one red accent so the payoff reads as the point.
 
 ### Figure 5.3 — The six-step interrogation procedure
-**Files:** images/05-verifying-the-data-fig-03.svg · d3/05-verifying-the-data-fig-03.html
+**Files:** ../images/05-verifying-the-data-fig-03.svg · ../d3/05-verifying-the-data-fig-03.html
 **Prompt:** A strictly linear six-node spine on white connected by single-direction ink arrows, with a dashed reference arc closing from the final compare step back to the locked prediction. Hold the steps in neutral grays and emphasize the prediction-lock node in the one red accent so the closing loop between expectation and finding is unmistakable.
 
 ### Figure 5.4 — Base rate pulls the posterior down
-**Files:** images/05-verifying-the-data-fig-04.svg · d3/05-verifying-the-data-fig-04.html
+**Files:** ../images/05-verifying-the-data-fig-04.svg · ../d3/05-verifying-the-data-fig-04.html
 **Prompt:** A single horizontal probability axis from zero to one on white with three markers — a neutral prior near 0.08, the raw scorer output at 0.68, and the corrected posterior between them — plus a correction arrow sweeping the raw value down to the posterior. Mark the corrected posterior in the one red accent and the prior's downward pull as a faint anchor line, no false-precision numerals baked in.
 

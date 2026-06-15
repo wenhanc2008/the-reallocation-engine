@@ -14,7 +14,7 @@ Start with the fact most candidates can state but almost none deploy. Students o
 
 That is the core fact. Everything else in this chapter is about when and how to say it.
 
-![The cost inversion shown as two cost bars on a shared zero baseline: hiring an equivalent domestic worker versus hiring an OPT candidate. The OPT bar is shorter by the employer's exempted FICA match — roughly seven and a half percent of wages — turning the assumed cost penalty into a saving.](images/12-the-opt-framing-generator-fig-03.png)
+![The cost inversion shown as two cost bars on a shared zero baseline: hiring an equivalent domestic worker versus hiring an OPT candidate. The OPT bar is shorter by the employer's exempted FICA match — roughly seven and a half percent of wages — turning the assumed cost penalty into a saving.](../images/12-the-opt-framing-generator-fig-03.png)
 *Figure 12.3 — The FICA cost inversion*
 
 ---
@@ -33,7 +33,7 @@ The logic underlying the ladder is one idea: **disclose in proportion to the aud
 
 The line between strategy and misrepresentation is not subtle once you look at it directly. "Authorized to work in the U.S." is true and leads with the relevant fact. "I don't anticipate any issues with work authorization" is fine if you believe it. "I'm a permanent resident" is fraud if you aren't. The tool lives entirely on one side of that line. It has no use on the other side, and it will not help you cross it.
 
-![A bright vertical line splits the field in two. On the left, the strategy side, sit true statements ordered for effect — "authorized to work," "FICA-exempt." On the right, the misrepresentation side, sit fabrications — "permanent resident," "no sponsorship ever needed." The line is hard, not a gradient: a statement is on one side or the other.](images/12-the-opt-framing-generator-fig-02.png)
+![A bright vertical line splits the field in two. On the left, the strategy side, sit true statements ordered for effect — "authorized to work," "FICA-exempt." On the right, the misrepresentation side, sit fabrications — "permanent resident," "no sponsorship ever needed." The line is hard, not a gradient: a statement is on one side or the other.](../images/12-the-opt-framing-generator-fig-02.png)
 *Figure 12.2 — The bright line: strategy vs. misrepresentation*
 
 ---
@@ -49,7 +49,7 @@ The table below summarizes the rules in compact form:
 
 The hard rule cuts symmetrically. You do not over-claim — no implying permanent authorization you don't have, no stretching the OPT clock beyond its actual dates. And you do not deny or hide when directly asked. Strategic timing of true information is the entire toolkit. A false impression is not a variant of the toolkit. It is a different thing entirely.
 
-![A three-rung ladder keyed to sponsorship tier. The Proven rung discloses authorization directly; the Likely rung leads with the FICA benefit and explains the acronym; the Unknown rung keeps visa status out of written materials and defers it to the interview. Disclosure increases in proportion to the audience's understanding.](images/12-the-opt-framing-generator-fig-01.png)
+![A three-rung ladder keyed to sponsorship tier. The Proven rung discloses authorization directly; the Likely rung leads with the FICA benefit and explains the acronym; the Unknown rung keeps visa status out of written materials and defers it to the interview. Disclosure increases in proportion to the audience's understanding.](../images/12-the-opt-framing-generator-fig-01.png)
 *Figure 12.1 — Disclosure-by-tier ladder*
 
 ---
@@ -257,13 +257,13 @@ Record, per application, the tier, the framing approach used, and a one-line con
 ## Prompts
 
 ### Figure 12.1 — Disclosure-by-tier ladder
-**Files:** images/12-the-opt-framing-generator-fig-01.svg
+**Files:** ../images/12-the-opt-framing-generator-fig-01.svg
 **Prompt:** Brutalist three-rung ladder on a white canvas, one rung per sponsorship tier: Proven (disclose directly), Likely (lead with the FICA benefit, explain the acronym), Unknown (nothing in writing, defer to interview). Disclosure rises with the rung. Ink structure, one red accent on the active rung, EB Garamond labels, no shadows or gradients.
 
 ### Figure 12.2 — The bright line: strategy vs. misrepresentation
-**Files:** images/12-the-opt-framing-generator-fig-02.svg
+**Files:** ../images/12-the-opt-framing-generator-fig-02.svg
 **Prompt:** Brutalist conceptual map split by one hard vertical red line: the strategy side holds true statements ordered for effect; the misrepresentation side holds fabrications. Render it as a binary boundary, not a gradient. White canvas, ink text, JetBrains Mono for the example phrases, no decoration.
 
 ### Figure 12.3 — The FICA cost inversion
-**Files:** images/12-the-opt-framing-generator-fig-03.svg
+**Files:** ../images/12-the-opt-framing-generator-fig-03.svg
 **Prompt:** Brutalist two-bar comparison on a shared zero baseline: cost of an equivalent domestic hire versus an OPT hire, the OPT bar shorter by the exempted employer FICA match (~7.5% of wages). One red accent on the saving, ink axes, JetBrains Mono tick labels, white canvas, no gradients.

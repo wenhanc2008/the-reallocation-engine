@@ -23,7 +23,7 @@ You don't ask the AI to "build a job-search engine." You conduct it through phas
 
 **Phase six: release.** The first real run.
 
-![Six build phases in a left-to-right sequence — foundation, core skeleton, integration, full feature build, hardening, release. Each phase is split into an "AI executes" row and a "you verify" row, with a handoff condition between phases that must be stated precisely before proceeding.](images/16-the-build-and-the-honest-run-fig-01.png)
+![Six build phases in a left-to-right sequence — foundation, core skeleton, integration, full feature build, hardening, release. Each phase is split into an "AI executes" row and a "you verify" row, with a handoff condition between phases that must be stated precisely before proceeding.](../images/16-the-build-and-the-honest-run-fig-01.png)
 *Figure 16.1 — Six phases, two rows: AI executes, you verify*
 
 <!-- → [DIAGRAM: Six build phases shown as a left-to-right sequence with labeled handoff conditions between phases. Each phase split into two rows: "AI executes" (top) and "You verify" (bottom). The gap between phases labeled "handoff condition — must be stated precisely before proceeding." Caption: "A handoff you can't state precisely is a phase you haven't actually finished."] -->
@@ -55,7 +55,7 @@ The model can verify that code is internally consistent. It cannot verify that t
 
 *The test: can the model verify this against reality, or only against itself? If only against itself, it's yours.*
 
-![Two columns. "Give to the AI": scaffolding, schemas, formula implementation, boilerplate, glue code, documentation drafts — anything checkable against reality. "Keep for yourself": weight calibration, plausibility audits, Unknown-tier interpretation, privacy and honesty calls, the final go/no-go — the things the model can verify only against itself.](images/16-the-build-and-the-honest-run-fig-02.png)
+![Two columns. "Give to the AI": scaffolding, schemas, formula implementation, boilerplate, glue code, documentation drafts — anything checkable against reality. "Keep for yourself": weight calibration, plausibility audits, Unknown-tier interpretation, privacy and honesty calls, the final go/no-go — the things the model can verify only against itself.](../images/16-the-build-and-the-honest-run-fig-02.png)
 *Figure 16.2 — Give to the AI vs. keep for yourself*
 
 ## The ethics gate
@@ -89,10 +89,10 @@ But before the batch ran, a plausibility audit caught something. A draft composi
 
 Fixed. That is what plausibility auditing is for.
 
-![Two panels for the same role past its OPT window. In the buggy panel, the timeline factor is treated as a weighted vote: strong sponsorship, fit, and liveness drag the composite up to about 0.70, scoring Consider — wrong but reasonable-looking. In the fixed panel, the timeline factor is a multiplier: the closed gate drives the composite to zero, scoring Skip. The code ran in both cases; only the audit caught the difference.](images/16-the-build-and-the-honest-run-fig-03.png)
+![Two panels for the same role past its OPT window. In the buggy panel, the timeline factor is treated as a weighted vote: strong sponsorship, fit, and liveness drag the composite up to about 0.70, scoring Consider — wrong but reasonable-looking. In the fixed panel, the timeline factor is a multiplier: the closed gate drives the composite to zero, scoring Skip. The code ran in both cases; only the audit caught the difference.](../images/16-the-build-and-the-honest-run-fig-03.png)
 *Figure 16.3 — The gate-as-vote bug caught by plausibility audit*
 
-![Horizontal bar chart of one sample batch of 30 roles broken down by outcome: Apply about 13 percent, Consider about 30 percent, Skip about 57 percent. The skip rate is the engine working, not failing — the time that doesn't go to ghost postings goes somewhere that matters.](images/16-the-build-and-the-honest-run-fig-04.png)
+![Horizontal bar chart of one sample batch of 30 roles broken down by outcome: Apply about 13 percent, Consider about 30 percent, Skip about 57 percent. The skip rate is the engine working, not failing — the time that doesn't go to ghost postings goes somewhere that matters.](../images/16-the-build-and-the-honest-run-fig-04.png)
 *Figure 16.4 — First real run: 30 roles by outcome and tier*
 
 <!-- → [CHART: Horizontal bar chart showing one sample batch: 30 roles broken down into Apply (approx. 13%), Consider (approx. 30%), Skip (approx. 57%). Bars color-coded by sponsorship tier (Proven, Likely, Unknown, Non-sponsor). Caption: "A first real run on 30 roles — the skip rate isn't failure, it's the engine working. The time that doesn't go to ghost postings goes somewhere that matters."] -->
@@ -310,17 +310,17 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 16.1 — Six phases, two rows: AI executes, you verify
-**Files:** images/16-the-build-and-the-honest-run-fig-01.svg · d3/16-the-build-and-the-honest-run-fig-01.html
+**Files:** ../images/16-the-build-and-the-honest-run-fig-01.svg · ../d3/16-the-build-and-the-honest-run-fig-01.html
 **Prompt:** Brutalist phase sequence on white: six phases left to right (foundation, skeleton, integration, features, hardening, release), each a two-row stack — an "AI executes" row (red-outlined) above a "you verify" row (ink-outlined) — with single-headed handoff arrows and an ochre note that a handoff must be stated precisely. No shadows or gradients.
 
 ### Figure 16.2 — Give to the AI vs. keep for yourself
-**Files:** images/16-the-build-and-the-honest-run-fig-02.svg
+**Files:** ../images/16-the-build-and-the-honest-run-fig-02.svg
 **Prompt:** Brutalist two-column comparison on white: a gray "Give to the AI" column (scaffolding, schemas, formulas, boilerplate, glue code) beside a red-outlined "Keep for yourself" column (weight calibration, plausibility audits, Unknown-tier interpretation, privacy and honesty, final go/no-go). One red accent, ink text, no decoration.
 
 ### Figure 16.3 — The gate-as-vote bug caught by plausibility audit
-**Files:** images/16-the-build-and-the-honest-run-fig-03.svg
+**Files:** ../images/16-the-build-and-the-honest-run-fig-03.svg
 **Prompt:** Brutalist two-panel contrast on white: the buggy panel treats the timeline factor as a weighted vote, leaving a past-OPT role at composite ≈0.70 and "Consider"; the fixed panel treats it as a multiplier (× 0.0), collapsing the composite to zero and "Skip." JetBrains Mono for the numbers, red accent on the correct path, ochre rule under the caption. No gradients or shadows.
 
 ### Figure 16.4 — First real run: 30 roles by outcome and tier
-**Files:** images/16-the-build-and-the-honest-run-fig-04.svg · d3/16-the-build-and-the-honest-run-fig-04.html
+**Files:** ../images/16-the-build-and-the-honest-run-fig-04.svg · ../d3/16-the-build-and-the-honest-run-fig-04.html
 **Prompt:** Brutalist horizontal bar chart on a zero baseline: 30 roles by outcome — Apply ~13%, Consider ~30%, Skip ~57% — with Apply and the high skip rate in the red accent and the rest in grays. JetBrains Mono percentage labels, ink axes, one ochre rule under the caption that the skip rate is the engine working. No gradients or shadows.

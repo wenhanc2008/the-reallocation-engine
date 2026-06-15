@@ -29,7 +29,7 @@ The recipes split into two groups, and understanding the split is the chapter's 
 
 The taxonomy is not a permanent ranking. A draft recipe you have verified is trustworthy for that run. An active recipe that has been edited without your knowledge might not be. The classification is always about what the recipe did on this run, not what it is named.
 
-![Two columns of recipes. The active column — scan, pipeline, oferta, tracker, pdf — calls scripts and reads audits, producing findings. The draft and helper column — apply, contacto, deep, followup, interview-prep, ofertas, project, training — carries a "verify before trusting" label, treated as model judgment until confirmed. The split is about evidence, not hierarchy.](images/14-skills-operating-the-engine-fig-01.png)
+![Two columns of recipes. The active column — scan, pipeline, oferta, tracker, pdf — calls scripts and reads audits, producing findings. The draft and helper column — apply, contacto, deep, followup, interview-prep, ofertas, project, training — carries a "verify before trusting" label, treated as model judgment until confirmed. The split is about evidence, not hierarchy.](../images/14-skills-operating-the-engine-fig-01.png)
 *Figure 14.1 — Active vs. draft recipes*
 
 ## The loop
@@ -42,7 +42,7 @@ Operating the engine is one loop, repeated:
 
 The loop is deliberately boring, and the boredom is the safety. Each pass leaves a trace. A decision made three weeks ago can be reconstructed, questioned, and updated when new information arrives. The moment you skip the inspect step — accepting a recipe's output because it looks right, because the format is familiar, because the recommendation matches what you hoped — you've reopened the fluency trap. The surface was the danger in Chapter 1. It is still the danger in Chapter 14.
 
-![A three-step cycle drawn as a clockwise loop: Run an active recipe, Inspect the output and its provenance, Record the run in RUN_LOG.md, then back to Run. The inspect node is annotated as the only protection — skip it and the fluency trap reopens.](images/14-skills-operating-the-engine-fig-02.png)
+![A three-step cycle drawn as a clockwise loop: Run an active recipe, Inspect the output and its provenance, Record the run in RUN_LOG.md, then back to Run. The inspect node is annotated as the only protection — skip it and the fluency trap reopens.](../images/14-skills-operating-the-engine-fig-02.png)
 *Figure 14.2 — The run-inspect-record loop with provenance checkpoints*
 
 ## A full sequence, end to end
@@ -81,7 +81,7 @@ The `pipeline` pass scores the role. Sponsorship probability from the LCA and H-
 
 That's the whole loop. What makes it different from just reading the recommendation is the inspect step — knowing that the sponsorship term is 0.65 not 0.9, knowing why the composite landed on Consider rather than Apply, knowing which factor would have to improve to push it across the threshold. The recommendation is the headline. The provenance is the argument.
 
-![A flow diagram of scan → pipeline → oferta → verify as four sequential stages, each annotated with its provenance checkpoint: ATS detected and postings list; four factors with source labels; composite with traced terms; consistency audit. The chain feeds into RUN_LOG.md.](images/14-skills-operating-the-engine-fig-03.png)
+![A flow diagram of scan → pipeline → oferta → verify as four sequential stages, each annotated with its provenance checkpoint: ATS detected and postings list; four factors with source labels; composite with traced terms; consistency audit. The chain feeds into RUN_LOG.md.](../images/14-skills-operating-the-engine-fig-03.png)
 *Figure 14.3 — End-to-end chain: scan → pipeline → oferta → verify*
 
 <!-- → [DIAGRAM: Flow diagram showing scan → pipeline → oferta → verify as four sequential boxes, each with a "provenance checkpoint" annotation (e.g., "ATS detected, postings list," "four factors with source labels," "composite with traced terms," "consistency audit"). Arrow at the end pointing to RUN_LOG.md. Caption: "The chain is only as trustworthy as its weakest provenance link — the verify step confirms consistency, not correctness."] -->
@@ -306,13 +306,13 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 14.1 — Active vs. draft recipes
-**Files:** images/14-skills-operating-the-engine-fig-01.svg
+**Files:** ../images/14-skills-operating-the-engine-fig-01.svg
 **Prompt:** Brutalist two-column comparison on white: an active column (scan, pipeline, oferta, tracker, pdf in JetBrains Mono, each with a one-line description) that calls scripts and reads audits, beside a draft/helper column (apply, contacto, deep, followup, and others) tagged "verify before trusting." Red accent on active, gray on draft. No shadows or gradients.
 
 ### Figure 14.2 — The run-inspect-record loop with provenance checkpoints
-**Files:** images/14-skills-operating-the-engine-fig-02.svg
+**Files:** ../images/14-skills-operating-the-engine-fig-02.svg
 **Prompt:** Brutalist cycle diagram on white: three nodes — Run, Inspect, Record — joined by clockwise single-headed arrows, with the Inspect node accented and labeled as the only protection. One ochre rule under the caption. EB Garamond node labels, ink strokes, no decoration.
 
 ### Figure 14.3 — End-to-end chain: scan → pipeline → oferta → verify
-**Files:** images/14-skills-operating-the-engine-fig-03.svg · d3/14-skills-operating-the-engine-fig-03.html
+**Files:** ../images/14-skills-operating-the-engine-fig-03.svg · ../d3/14-skills-operating-the-engine-fig-03.html
 **Prompt:** Brutalist flow diagram on white: four sequential stages (scan, pipeline, oferta, verify) in JetBrains Mono, each with a provenance-checkpoint caption, feeding a single-headed arrow into a RUN_LOG.md node. Red accent on the stage names, ink boxes, one ochre rule under the caption about the weakest provenance link. No shadows or gradients.

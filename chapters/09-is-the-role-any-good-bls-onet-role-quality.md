@@ -35,14 +35,14 @@ The hardest part of this is the first step: correctly mapping the posting's titl
 
 A language model is genuinely useful here, within limits. It has encountered thousands of job titles and their occupational descriptions, and it is good at proposing a plausible SOC match from a messy posting. But proposing is not confirming. The verification step is mandatory: take the model's proposed SOC, look at the alternate-title list in the compact row, and check whether your posting's title or description actually appears there. If it does, the match is confirmed. If it doesn't, you re-classify before you trust any number downstream. The model proposes; the data confirms; you judge. This is the same verified-data contract from Chapter 3, now applied to classification rather than company counts.[^soc]
 
-![A horizontal process flowchart tracing a raw posting title through a model that proposes a candidate occupation code, a verification gate that checks the proposed code's alternate-title list against the posting, a confirmed path to the joined occupation row, and a rejected path that loops back to re-propose; three role-quality features are read from the confirmed row.](images/09-is-the-role-any-good-bls-onet-role-quality-fig-01.png)
+![A horizontal process flowchart tracing a raw posting title through a model that proposes a candidate occupation code, a verification gate that checks the proposed code's alternate-title list against the posting, a confirmed path to the joined occupation row, and a rejected path that loops back to re-propose; three role-quality features are read from the confirmed row.](../images/09-is-the-role-any-good-bls-onet-role-quality-fig-01.png)
 *Figure 9.1 — Title-to-occupation resolution pipeline*
 
 Consider what it looks like when this goes wrong. A posting titled "Growth Analyst" gets mapped by the model to a SOC for market research analysts — reasonable enough on its face. The compact row for that SOC shows stable employment and a wage band that looks acceptable. But the alternate-title list doesn't contain anything close to "growth analyst" — the posting is actually describing a role closer to a data scientist, and that occupation's SOC has a completely different wage distribution and a steeper skill profile. If you skip the alternate-title check, you've just evaluated the wrong job. The title was ambiguous; the alternate-title list is not.
 
 ---
 
-![A two-panel comparison: the left panel shows an ambiguous title mapped to a plausible-but-wrong occupation whose alternate-title list does not contain the work, with a lower wage band; the right panel shows the same posting correctly re-classified to the occupation whose alternate-title list does contain the work, with a higher wage band on a shared zero-based scale. The gap between the bands is the cost of skipping the check.](images/09-is-the-role-any-good-bls-onet-role-quality-fig-03.png)
+![A two-panel comparison: the left panel shows an ambiguous title mapped to a plausible-but-wrong occupation whose alternate-title list does not contain the work, with a lower wage band; the right panel shows the same posting correctly re-classified to the occupation whose alternate-title list does contain the work, with a higher wage band on a shared zero-based scale. The gap between the bands is the cost of skipping the check.](../images/09-is-the-role-any-good-bls-onet-role-quality-fig-03.png)
 *Figure 9.2 — The silent wrong-SOC error*
 
 Once the SOC is confirmed, the compact row gives you three features that matter for the decision:
@@ -53,7 +53,7 @@ Once the SOC is confirmed, the compact row gives you three features that matter 
 
 **Job zone.** O\*NET's job zones run from one to five, describing the typical preparation each occupation requires — from jobs that need little beyond a few days of training to occupations requiring extensive graduate preparation and years of experience. A job zone four or five occupation with a posting that claims to want recent graduates is either mismapped or unusual; knowing the zone helps you calibrate how competitive the real candidate pool is likely to be.
 
-![A structural schematic of one compact occupation row decomposed into three parallel feature panels: an employment-trend line across survey years, a wage band marked at five percentiles, and a five-step job-zone preparation ladder, with the alternate-title list attached above as the confirmation feed.](images/09-is-the-role-any-good-bls-onet-role-quality-fig-02.png)
+![A structural schematic of one compact occupation row decomposed into three parallel feature panels: an employment-trend line across survey years, a wage band marked at five percentiles, and a five-step job-zone preparation ladder, with the alternate-title list attached above as the confirmation feed.](../images/09-is-the-role-any-good-bls-onet-role-quality-fig-02.png)
 *Figure 9.3 — The compact row: three role-quality features*
 
 These three features, read together from one compact row, tell you more about a role's quality than any amount of reading the posting itself. The posting was written to make the role sound desirable. The compact row was built from surveys of everyone actually employed in the occupation.
@@ -249,15 +249,15 @@ After completing this validation, write a two-sentence AI Use Disclosure:
 ## Prompts
 
 ### Figure 9.1 — Title-to-occupation resolution pipeline
-**Files:** images/09-is-the-role-any-good-bls-onet-role-quality-fig-01.svg · d3/09-is-the-role-any-good-bls-onet-role-quality-fig-01.html
+**Files:** ../images/09-is-the-role-any-good-bls-onet-role-quality-fig-01.svg · ../d3/09-is-the-role-any-good-bls-onet-role-quality-fig-01.html
 **Prompt:** Brutalist horizontal process flowchart: raw posting title → model proposes a code → alternate-title verification gate → confirmed path to the joined O\*NET/OEWS row → rejected path looping back to re-propose → read three features. Keep propose visually distinct from confirm; ochre for propose, red/active for the confirmed path, single-direction arrows with one return loop.
 
 ### Figure 9.2 — The silent wrong-SOC error
-**Files:** images/09-is-the-role-any-good-bls-onet-role-quality-fig-03.svg · d3/09-is-the-role-any-good-bls-onet-role-quality-fig-03.html
+**Files:** ../images/09-is-the-role-any-good-bls-onet-role-quality-fig-03.svg · ../d3/09-is-the-role-any-good-bls-onet-role-quality-fig-03.html
 **Prompt:** Brutalist two-panel comparison on a shared zero-based wage scale: left panel an ambiguous title mapped to a wrong occupation (lower band, alternate-title list lacks the work, blocking marker); right panel the corrected occupation (higher band, match confirmed). The visible gap between the bands is the cost of skipping the check. Ochre/blocked left, red/confirmed right.
 
 ### Figure 9.3 — The compact row: three role-quality features
-**Files:** images/09-is-the-role-any-good-bls-onet-role-quality-fig-02.svg · d3/09-is-the-role-any-good-bls-onet-role-quality-fig-02.html
+**Files:** ../images/09-is-the-role-any-good-bls-onet-role-quality-fig-02.svg · ../d3/09-is-the-role-any-good-bls-onet-role-quality-fig-02.html
 **Prompt:** Brutalist structural schematic: one compact occupation row fanning into three parallel feature panels — an employment-trend line across survey years, a wage band at five percentiles, and a five-step job-zone ladder — with the alternate-title list attached above as the confirmation feed. Equal visual weight per panel, one accent color, hairline connectors.
 
 ## Key terms
