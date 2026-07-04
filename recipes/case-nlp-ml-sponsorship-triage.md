@@ -1,6 +1,6 @@
 ---
 status: RUNNABLE-SAMPLE
-todos_open: 3
+todos_open: 4
 last_gate: gate-4-script-readiness
 attestation: "Wenhan Cheng · 2026-07-04 · RUNNABLE-SAMPLE"
 recipe_version: 0.2.0
